@@ -1,0 +1,3 @@
+I: REPROSEED=1 (provided) set for  AFNI ANTs PyMVPA FreeSurfer GSL
+W: overriding MKL_CBWR=AVX2,STRICT
+I: reproseed.sh - running /home/leej3/reproseed/.pixi/envs/default/bin/python /home/leej3/reproseed/benchmark/probe.py /home/leej3/reproseed/recorded-v2/results/strict_pr-t2-r2
