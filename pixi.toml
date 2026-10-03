@@ -5,9 +5,9 @@ platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
-benchmark = "datalad run -m numerical-matrix --explicit -i pixi.toml -i pixi.lock -i benchmark -i execute_recorded.py -o recorded python execute_recorded.py"
-reproduce = "datalad rerun benchmark-recorded"
 benchmark-v2 = "datalad run -m finalized-cpu-matrix --explicit -i pixi.toml -i pixi.lock -i benchmark -i execute_recorded.py -o recorded-v2 python execute_recorded.py"
+benchmark = "datalad run -m finalized-cpu-matrix --explicit -i pixi.toml -i pixi.lock -i benchmark -i execute_recorded.py -o recorded-v2 python execute_recorded.py"
+reproduce = "datalad rerun c3fa2559a942cebce693fd6f9608ee77558855ab"
 
 [dependencies]
 python = "==3.13.5"

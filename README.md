@@ -1,89 +1,111 @@
-# reproseed PR 9: Typhon numerical investigation
+# CPU reproducibility experiments for reproseed PR 9
 
-Recommendation: preserve explicit MKL_CBWR settings. The PR removes STRICT and
-introduces thread-count-dependent output in the tested GEMM workloads. The isolated
-candidate restores the direct STRICT results. This is a demonstrated bitwise
-reproducibility regression, not a demonstrated scientific-significance error.
+These experiments support [ReproNim/reproseed#9](https://github.com/ReproNim/reproseed/pull/9)
+and the proposed preservation of explicit MKL CNR settings and NumPy exclusions.
+The scripts, locked Pixi environment, DataLad executions, runtime diagnostics,
+and output arrays are preserved here. Upstream revision: `5f8229787001a946e4e020b68805661272577428`.
 
-## Recorded experiment
+## Main findings
 
-- Host: Typhon, Intel Xeon Silver 4309Y, Linux x86_64 with AVX512/FMA.
-- Source: source/ detached at 5f8229787001a946e4e020b68805661272577428; unchanged.
-- Python 3.13.5; NumPy 2.4.2; MKL 2025.2.0; bundled OpenBLAS 0.3.31.dev.
-- Complete installed versions: requirements.lock. CPU evidence: host-cpu.txt.
-- Final authoritative run: results/20261003T182617Z; logs/final_*.
-- 9 configurations x 3 thread counts (1/2/4) x 2 fresh processes = 54 successful runs.
-- MKL_DYNAMIC=FALSE, OMP_DYNAMIC=FALSE; MKL, OpenMP and OpenBLAS counts explicitly set.
-- Seeded PCG64 inputs; input byte hashes verified equal in every comparison.
-- Four double-precision GEMMs: (m,k,n) = (257,513,193), (8,8193,8),
-  (129,2049,65), (513,513,513). NumPy exp/log and OpenBLAS GEMM also recorded.
-- Every one of the 27 within-configuration repeat pairs was bitwise identical.
+1. **Preserve MKL STRICT.** On Typhon, direct `AVX2,STRICT` made all four tested
+   double-precision GEMMs identical across 1/2/4 threads. The original PR drops
+   STRICT and three shapes vary with thread count. Preserving the explicit value
+   restores the direct results. For `(m,k,n)=(8,8193,8)`, the PR's 1-vs-2-thread
+   comparison differs in 62/64 elements, maximum absolute error `1.652011860642233e-13`.
+2. **Merge NumPy exclusions.** Starting with `NPY_DISABLE_CPU_FEATURES=X86_V3`, the
+   candidate retains it and adds the PR's exclusions. All five NumPy outputs match
+   explicitly supplying the combined list. On Typhon, original PR versus candidate
+   differs in 39,313 float32 exp values, 11,739 log values, and 14,227 sin values
+   out of 100,003 each. Maximum absolute differences are 0.001953125,
+   4.76837158203125e-7, and 5.960464477539063e-8 respectively. The original PR had
+   removed X86_V3; the recorded feature map verifies its preservation by the fix.
+3. **The default profile helps, but MKL differs across vendors in this matrix.**
+   At each fixed thread count, all ten PR-controlled arrays agree between the two
+   Intel hosts. Against Unity AMD, the six NumPy/OpenBLAS arrays agree, but all four
+   MKL products differ. On AMD, MKL's CNR query reports AUTO (2) for the PR's AVX2
+   request, whereas Typhon reports AVX2 (10). Explicit COMPATIBLE preserved by the
+   candidate yields agreement of all ten arrays across all three hosts at each
+   fixed thread count. This is an observed result for these versions and inputs,
+   not a claim of arbitrary workload equivalence.
+4. **Separate CNR enablement from branch selection.** On Typhon, explicitly setting
+   AVX512 versus AVX2 (standard CNR enabled in both cases) changes all four MKL
+   products. NumPy and OpenBLAS outputs in that controlled comparison are identical.
+   This supports a branch-selection effect without attributing every difference
+   in an uncontrolled native-vs-wrapper comparison solely to AVX512 instructions.
 
-## Findings
+## Hosts and recorded executions
 
-Direct AVX2,STRICT: all four MKL outputs identical across 1/2/4 threads.
-PR with AVX2,STRICT preset: the environment becomes AVX2 and three GEMM shapes
-vary across thread counts. For (8,8193,8), 1 versus 2 threads differs in 62/64
-elements, maximum absolute difference 1.652011860642233e-13.
+Each host ran 14 configurations x 3 thread counts x 2 fresh processes = 84 runs,
+with 10 output arrays per run. All 42 repeat pairs per host were bitwise identical.
+Input byte hashes match in every cross-host comparison.
 
-MKL_CBWR_Get(MKL_CBWR_ALL) confirms 65546 (= AVX2 10 | STRICT 65536) directly,
-10 under the PR, and 65546 under candidate-reproseed.sh. The candidate preserves
-any nonempty explicit MKL_CBWR. All four candidate MKL outputs match the direct
-STRICT outputs at each thread count and across thread counts. Other PR controls
-remain active; OpenBLAS reports Haswell under both PR and candidate.
+| Host | CPU | ISA | DataLad execution | Git branch |
+|---|---|---|---|---|
+| Typhon | Intel Xeon Silver 4309Y | AVX512 | `c3fa2559a942cebce693fd6f9608ee77558855ab` | `master` |
+| Smaug | Intel Xeon E5-2623 v3 | AVX2 | rerun `686cd602c70c3ba19bc79633e2ec44cd4706c88b` | `smaug-results` |
+| Unity cpu053 | AMD EPYC 7763 | AVX2 | rerun `e37bd9e1163d1e59c4f3f86e333c22979621d4fd` | `unity-results` |
 
-COMPATIBLE is also replaced: diagnostic 3 becomes 10. The candidate preserves 3
-and matches direct COMPATIBLE MKL outputs at each thread count. COMPATIBLE does
-not promise independence of thread count; this is not an AMD hardware test.
+Unity ran via Slurm job 65197091 with 4 CPUs and 4 GiB; its script and log are on
+`unity-results` under `scheduler/`. Both reruns execute the Typhon DataLad run,
+not a separately rewritten benchmark. No numerical work ran on Unity's login node.
 
-Native versus PR at one thread: NumPy exp differs in 4530/100003 values and log
-in 115/100003; OpenBLAS switches from SkylakeX to Haswell and GEMM differs.
-These show the controls change paths/results on this host. They do not by
-themselves establish agreement across different physical CPUs.
-
-## Reproduce
-
-From /home/leej3/reproseed:
+## Inspect and reproduce
 
 ```sh
-uv venv .venv
-uv pip install --python .venv/bin/python -r requirements.lock
-duct --fail-time 0 -p logs/reproduction_ .venv/bin/python run.py
-# Substitute the RESULTS directory printed by run.py:
-.venv/bin/python analyze.py results/20261003T182617Z
+git clone https://github.com/leej3/reproseed-cpu-experiments.git
+cd reproseed-cpu-experiments
+pixi install --locked
+# Re-execute the recorded finalized benchmark; outputs are under recorded-v2/.
+pixi run --locked datalad rerun c3fa2559a942cebce693fd6f9608ee77558855ab
+# Or record a new execution with the same declared inputs and outputs:
+pixi run --locked benchmark-v2
 ```
 
-run.py creates timestamped result directories; do not reuse a duct output prefix.
-The probe records environment, CPU-feature map, threadpool/backend versions,
-CNR settings, input hashes, output hashes and full arrays. Comparisons report
-bitwise equality, differing element counts, maximum absolute and relative errors.
-Maximum relative error uses max(abs(a),abs(b),tiny) as the denominator.
-The retained seeded generator and pinned NumPy regenerate inputs; input arrays
-are not separately saved. Source and experiment checksums are in evidence.sha256.
+Use a supported Linux x86-64 host. CPU availability affects the results and is
+recorded. Environment variables are set before library import. Each run fixes
+OMP/MKL/OpenBLAS threads to 1, 2, or 4 and sets both dynamic-thread controls FALSE.
+MKL is 2025.2.0, NumPy 2.4.2, Python 3.13.5; complete packages/builds are in pixi.lock.
+No GPU, PyTorch, or oneDNN numerical tests are included.
 
-## Scope and remaining work
+DataLad records command, inputs and outputs; Pixi supplies the environment.
+Keep the recorded code/lock revision when reproducing. `PROVENANCE.md` describes
+the earlier v1 workflow; the finalized v2 command above supersedes it.
 
-No PyTorch/oneDNN runs, AMD runs, CPU masking, or cross-machine comparisons yet.
-The tested candidate addresses MKL only, not NumPy exclusion merging. Preserving
-explicit settings permits intentional deviations from the default profile.
-No PR changes, commits, or external comments were made.
+### Retrieve arrays
 
-Earlier run 20261003T182408Z failed due to the harness calling a lowercase MKL
-symbol rather than the C ABI symbol MKL_CBWR_Get. The intermediate run
-20261003T182449Z completed computations but queried option 0 (invalid), returning
--2. Its numerical results are exploratory; use the final corrected run for claims.
-The final query uses -1, MKL_CBWR_ALL from the matching installed headers.
-Failed/intermediate scripts and logs remain for audit; these were harness errors.
-An initially installed yanked NumPy 2.4.0 was replaced before numerical testing.
+Each host branch has `recorded-v2/` with diagnostics, raw-array SHA256 hashes,
+full NPZ arrays, and `results/comparisons.json` (bitwise equality, differing counts,
+maximum absolute and relative differences). Archives are hosted in the
+[cpu-matrix-v2 release](https://github.com/leej3/reproseed-cpu-experiments/releases/tag/cpu-matrix-v2).
+DataLad's archive remote maps individual annexed arrays to these assets:
 
-## Primary references
+```sh
+pixi run datalad get recorded-v2/results/strict-t1-r1/outputs.npz
+# For another host, use a separate clone with --branch smaug-results or unity-results.
+```
 
-- PR code: https://github.com/ReproNim/reproseed/blob/5f8229787001a946e4e020b68805661272577428/reproseed.sh#L74
-- Intel CNR conditions (STRICT includes GEMM; standard CNR requires fixed threading): https://www.intel.com/content/www/us/en/docs/onemkl/developer-guide-linux/2025-2/reproducibility-conditions.html
-- Branch semantics and STRICT syntax: https://www.intel.com/content/www/us/en/docs/onemkl/developer-guide-linux/2025-2/specifying-code-branches.html
-- CNR diagnostic API: https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-c/2025-2/mkl-cbwr-get.html
-- Installed matching constants/ABI: .venv/include/mkl_types.h and mkl_service.h.
+`cross-host-inputs/` contains the exact metadata collected from each host's Git
+history, including the source commit. `summarize.py` verifies identical inputs
+and computes `cross-host-summary.json`. No tolerance threshold is used for
+bitwise comparisons; small numerical differences are not asserted to have
+scientific significance. Published archives contain the final v2 arrays; older
+v1 results remain historical metadata and are not all available from the release.
 
-Suggested review focus: preserve explicitly configured MKL CNR and add regression
-coverage. This request is supported by an actual counterexample and a tested fix;
-broader backend caveats should remain separate from this demonstrated issue.
+## Review scope and references
+
+Proposed changes: retain explicit MKL CNR (warn on unverified/out-of-profile
+settings); merge NumPy exclusions without duplicate growth; describe the profile
+as configuring supported libraries; document MKL vendor/thread requirements and
+oneDNN's build dependency. The candidate script is `benchmark/candidate-reproseed.sh`.
+The shell patch passed ShellCheck and all 21 Bats tests on Linux.
+
+- [Intel CNR conditions](https://www.intel.com/content/www/us/en/docs/onemkl/developer-guide-linux/2025-2/reproducibility-conditions.html)
+- [Intel branch semantics](https://www.intel.com/content/www/us/en/docs/onemkl/developer-guide-linux/2025-2/specifying-code-branches.html)
+- [CNR diagnostic API](https://www.intel.com/content/www/us/en/docs/onemkl/developer-reference-c/2025-2/mkl-cbwr-get.html)
+- [NumPy runtime controls](https://numpy.org/doc/stable/reference/simd/build-options.html#runtime-dispatch)
+- [oneDNN build/runtime controls](https://uxlfoundation.github.io/oneDNN/dev_guide_cpu_dispatcher_control.html)
+
+The early harness corrections and initial historical runs are documented in Git
+history. Current claims use finalized v2 recorded runs and reruns. This dataset
+provides execution provenance and retrievable evidence; it does not establish
+all STAMPED properties or universal numerical equivalence.
