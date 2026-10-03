@@ -1,0 +1,1768 @@
+{
+  "source_commits": {
+    "typhon": "c3fa2559a942cebce693fd6f9608ee77558855ab",
+    "smaug": "8f4ea91317f33b827070944328b41548d9fe57ea",
+    "unity": "1b11e0e141bab7e570c1cd27664222a8381af81a"
+  },
+  "input_hashes_equal": true,
+  "comparisons": [
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx2-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx2-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx2-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx2-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx2-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx2-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx512-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx512-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx512-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx512-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx512-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "avx512-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_fixed-t1-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_fixed-t1-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_fixed-t2-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_fixed-t2-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_fixed-t4-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_fixed-t4-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_pr-t1-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_pr-t1-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_pr-t2-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_pr-t2-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_pr-t4-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "compatible_pr-t4-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "native-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "native-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "native-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "native-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "native-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "native-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_existing-t1-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_existing-t1-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_existing-t2-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_existing-t2-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_existing-t4-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_existing-t4-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_expected-t1-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_expected-t1-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_expected-t2-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_expected-t2-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_expected-t4-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_expected-t4-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_fixed-t1-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_fixed-t1-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_fixed-t2-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_fixed-t2-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_fixed-t4-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_fixed-t4-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_pr-t1-r1",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_pr-t1-r2",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_pr-t2-r1",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_pr-t2-r2",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_pr-t4-r1",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "numpy_pr-t4-r2",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "pr-t1-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "pr-t1-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "pr-t2-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "pr-t2-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "pr-t4-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "pr-t4-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_fixed-t1-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_fixed-t1-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_fixed-t2-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_fixed-t2-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_fixed-t4-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_fixed-t4-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_pr-t1-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_pr-t1-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_pr-t2-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_pr-t2-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_pr-t4-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "smaug",
+      "case": "strict_pr-t4-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx2-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx2-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx2-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx2-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx2-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx2-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx512-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx512-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx512-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx512-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx512-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "avx512-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_fixed-t1-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_fixed-t1-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_fixed-t2-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_fixed-t2-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_fixed-t4-r1",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_fixed-t4-r2",
+      "differing_arrays": []
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_pr-t1-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_pr-t1-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_pr-t2-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_pr-t2-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_pr-t4-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "compatible_pr-t4-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "native-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "native-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "native-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "native-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "native-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "native-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_existing-t1-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_existing-t1-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_existing-t2-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_existing-t2-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_existing-t4-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_existing-t4-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_expected-t1-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_expected-t1-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_expected-t2-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_expected-t2-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_expected-t4-r1",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_expected-t4-r2",
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_fixed-t1-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_fixed-t1-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_fixed-t2-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_fixed-t2-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_fixed-t4-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_fixed-t4-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_pr-t1-r1",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_pr-t1-r2",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_pr-t2-r1",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_pr-t2-r2",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_pr-t4-r1",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "numpy_pr-t4-r2",
+      "differing_arrays": [
+        "numpy_exp32",
+        "numpy_log32",
+        "numpy_sin32",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "pr-t1-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "pr-t1-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "pr-t2-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "pr-t2-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "pr-t4-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "pr-t4-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict-t1-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict-t1-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict-t2-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict-t2-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict-t4-r1",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict-t4-r2",
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_fixed-t1-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_fixed-t1-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_fixed-t2-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_fixed-t2-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_fixed-t4-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_fixed-t4-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_pr-t1-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_pr-t1-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_pr-t2-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_pr-t2-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_pr-t4-r1",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "reference": "typhon",
+      "other": "unity",
+      "case": "strict_pr-t4-r2",
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    }
+  ]
+}
