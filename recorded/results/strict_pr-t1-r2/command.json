@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/home/leej3/reproseed/benchmark/upstream-reproseed.sh",
+    "/home/leej3/reproseed/.pixi/envs/default/bin/python",
+    "/home/leej3/reproseed/benchmark/probe.py",
+    "/home/leej3/reproseed/recorded/results/strict_pr-t1-r2"
+  ],
+  "exit": 0
+}

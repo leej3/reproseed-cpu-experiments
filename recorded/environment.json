@@ -1,0 +1,15 @@
+{
+  "python": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:27:50) [GCC 13.3.0]",
+  "executable": "/home/leej3/reproseed/.pixi/envs/default/bin/python",
+  "platform": "Linux-6.12.57+deb13-amd64-x86_64-with-glibc2.41",
+  "source_commit": "5f8229787001a946e4e020b68805661272577428",
+  "inputs_sha256": {
+    "pixi.toml": "8188296994edaae6672b7ad127486741eca536e4b382590d379029ee7c9962ba",
+    "pixi.lock": "4c3676272317ff08cc37029c1193eb7da86720ff83ac1e04905161802c959c91",
+    "benchmark/analyze.py": "253ca595babc6d77416feb0f463427d4081c216cd4b02393a7d396d2651da7e2",
+    "benchmark/candidate-reproseed.sh": "398a6871fa6cac638984e0fa6c7f69721ada039b9be2d83ab3142bca5d7ab84f",
+    "benchmark/probe.py": "3e595ef863f7a66226ec53eb55ec99c39f95b5ffafb9a96ab79a14bf55d77876",
+    "benchmark/run_matrix.py": "a7457d27dce9be397f2b488e87c2187dbb4b12f99f2bba48027261b1d51611c2",
+    "benchmark/upstream-reproseed.sh": "80e38bf82a47d61780534b543b5226837eca90b8aefd09cc3799aee98baca69f"
+  }
+}
