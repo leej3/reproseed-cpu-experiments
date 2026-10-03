@@ -1,0 +1,4 @@
+* annex.largefiles=(largerthan=1mb)
+*.npz annex.largefiles=anything
+* annex.backend=MD5E
+**/.git* annex.largefiles=nothing
