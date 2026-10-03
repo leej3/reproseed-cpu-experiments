@@ -6,3 +6,15 @@
 1791057653s 1 :dl+archive:MD5E-s147671197--4151d12ee8ba748b27ef3d10dc262e0e.tar.gz#path=recorded-v2/results/pr-t1-r2/outputs.npz&size=5769228
 1791057656s 1 :dl+archive:MD5E-s147671197--4151d12ee8ba748b27ef3d10dc262e0e.tar.gz#path=recorded-v2/results/strict_pr-t1-r1/outputs.npz&size=5769228
 1791057656s 1 :dl+archive:MD5E-s147671197--4151d12ee8ba748b27ef3d10dc262e0e.tar.gz#path=recorded-v2/results/strict_pr-t1-r2/outputs.npz&size=5769228
+1791057659s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/avx2-t1-r1/outputs.npz&size=5769228
+1791057660s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/avx2-t1-r2/outputs.npz&size=5769228
+1791057660s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/avx512-t1-r1/outputs.npz&size=5769228
+1791057660s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/avx512-t1-r2/outputs.npz&size=5769228
+1791057663s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/compatible_pr-t1-r1/outputs.npz&size=5769228
+1791057663s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/compatible_pr-t1-r2/outputs.npz&size=5769228
+1791057663s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/native-t1-r1/outputs.npz&size=5769228
+1791057664s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/native-t1-r2/outputs.npz&size=5769228
+1791057667s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/pr-t1-r1/outputs.npz&size=5769228
+1791057667s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/pr-t1-r2/outputs.npz&size=5769228
+1791057669s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/strict_pr-t1-r1/outputs.npz&size=5769228
+1791057669s 1 :dl+archive:MD5E-s65633984--d5644139c76a8ac04e0649e29c872c3f.tar.gz#path=recorded-v2/results/strict_pr-t1-r2/outputs.npz&size=5769228
