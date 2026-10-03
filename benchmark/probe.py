@@ -7,10 +7,11 @@ info={'numpy':np.__version__, 'environment':{k:v for k,v in os.environ.items() i
 rng=np.random.Generator(np.random.PCG64(20261003))
 a=rng.standard_normal((257,513)); b=rng.standard_normal((513,193)); x=rng.uniform(.01,10,100003)
 info['input_hashes']={k:digest(v) for k,v in [('a',a),('b',b),('x',x)]}
-outputs={'numpy_exp':np.exp(x),'numpy_log':np.log(x),'openblas_gemm':a@b}
+outputs={'numpy_exp':np.exp(x),'numpy_log':np.log(x),'numpy_exp32':np.exp(x.astype(np.float32)), 'numpy_log32':np.log(x.astype(np.float32)), 'numpy_sin32':np.sin(x.astype(np.float32)),'openblas_gemm':a@b}
 mkl=C.CDLL(str(pathlib.Path(sys.prefix)/'lib/libmkl_rt.so.2'))
 mkl.MKL_CBWR_Get.argtypes=[C.c_int]; mkl.MKL_CBWR_Get.restype=C.c_int
 info['mkl_cbwr_raw']=mkl.MKL_CBWR_Get(-1)
+info['mkl_auto_branch']=mkl.MKL_CBWR_Get_Auto_Branch()
 ver=C.create_string_buffer(512); mkl.MKL_Get_Version_String(ver,C.c_int(512));info['mkl_version']=ver.value.decode()
 mkl.cblas_dgemm.argtypes=[C.c_int]*6+[C.c_double,C.c_void_p,C.c_int,C.c_void_p,C.c_int,C.c_double,C.c_void_p,C.c_int]
 for m,k,n in [(257,513,193),(8,8193,8),(129,2049,65),(513,513,513)]:

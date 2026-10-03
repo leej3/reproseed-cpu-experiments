@@ -1,9 +1,9 @@
 import os,pathlib,subprocess,sys,json,datetime
 root=pathlib.Path(__file__).resolve().parent
-run=root.parent/'recorded'/'results';run.mkdir(parents=True,exist_ok=True)
+run=root.parent/'recorded-v2'/'results';run.mkdir(parents=True,exist_ok=True)
 base={k:v for k,v in os.environ.items() if not k.startswith(('MKL_','OMP_','OPENBLAS_','NPY_','REPROSEED','ATEN_','ONEDNN_','DNNL_'))}
 base.update(REPROSEED='1',MKL_DYNAMIC='FALSE',OMP_DYNAMIC='FALSE',MKL_INTERFACE_LAYER='LP64',LD_LIBRARY_PATH=str(pathlib.Path(sys.prefix)/'lib'))
-cases=[('strict_fixed',{'MKL_CBWR':'AVX2,STRICT'},'fixed'),('compatible_fixed',{'MKL_CBWR':'COMPATIBLE'},'fixed'),('native',{},False),('pr',{},True),('strict',{'MKL_CBWR':'AVX2,STRICT'},False),('strict_pr',{'MKL_CBWR':'AVX2,STRICT'},True),('compatible',{'MKL_CBWR':'COMPATIBLE'},False),('compatible_pr',{'MKL_CBWR':'COMPATIBLE'},True),('avx2',{'MKL_CBWR':'AVX2'},False)]
+cases=[('numpy_existing',{'NPY_DISABLE_CPU_FEATURES':'X86_V3'},False),('numpy_expected',{'NPY_DISABLE_CPU_FEATURES':'X86_V3 AVX512F AVX512_SKX AVX512_ICL AVX512_SPR X86_V4'},False),('numpy_pr',{'NPY_DISABLE_CPU_FEATURES':'X86_V3'},True),('numpy_fixed',{'NPY_DISABLE_CPU_FEATURES':'X86_V3'},'fixed'),('avx512',{'MKL_CBWR':'AVX512'},False),('strict_fixed',{'MKL_CBWR':'AVX2,STRICT'},'fixed'),('compatible_fixed',{'MKL_CBWR':'COMPATIBLE'},'fixed'),('native',{},False),('pr',{},True),('strict',{'MKL_CBWR':'AVX2,STRICT'},False),('strict_pr',{'MKL_CBWR':'AVX2,STRICT'},True),('compatible',{'MKL_CBWR':'COMPATIBLE'},False),('compatible_pr',{'MKL_CBWR':'COMPATIBLE'},True),('avx2',{'MKL_CBWR':'AVX2'},False)]
 for name,extra,wrapped in cases:
  for threads in [1,2,4]:
   for repeat in [1,2]:

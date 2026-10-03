@@ -7,10 +7,13 @@ version = "0.1.0"
 [tasks]
 benchmark = "datalad run -m numerical-matrix --explicit -i pixi.toml -i pixi.lock -i benchmark -i execute_recorded.py -o recorded python execute_recorded.py"
 reproduce = "datalad rerun benchmark-recorded"
+benchmark-v2 = "datalad run -m finalized-cpu-matrix --explicit -i pixi.toml -i pixi.lock -i benchmark -i execute_recorded.py -o recorded-v2 python execute_recorded.py"
 
 [dependencies]
 python = "==3.13.5"
 git = ">=2.56.0,<3"
+bats-core = ">=1.14.0,<2"
+shellcheck = ">=0.11.0,<0.12"
 
 [pypi-dependencies]
 datalad = ">=1.6.5, <2"
