@@ -1,7 +1,7 @@
 {
   "python": "3.13.5 | packaged by conda-forge | (main, Jun 16 2025, 08:27:50) [GCC 13.3.0]",
-  "executable": "/home/leej3/reproseed/.pixi/envs/default/bin/python",
-  "platform": "Linux-6.12.57+deb13-amd64-x86_64-with-glibc2.41",
+  "executable": "/home/leej3/reproseed/dataset/.pixi/envs/default/bin/python",
+  "platform": "Linux-6.17.8+deb13-amd64-x86_64-with-glibc2.41",
   "source_commit": "5f8229787001a946e4e020b68805661272577428",
   "inputs_sha256": {
     "pixi.toml": "f5643cd2214905441b353f76c01458ffa9175b15e59551901bc56a927ef2e9f6",
