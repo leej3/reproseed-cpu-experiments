@@ -1,0 +1,587 @@
+[WARNING] psutil is not installed; open-file detection will not be available. Install it with: pip install datalad[misc] 
+[INFO] run commit c3fa255; (finalized-cpu-matrix) 
+[INFO] Making sure inputs are available (this may take some time) 
+[INFO] == Command start (output follows) ===== 
+2026-10-03T19:49:57+0000 [INFO    ] con-duct: python-dotenv not installed, skipping .env file loading
+2026-10-03T19:49:57+0000 [INFO    ] con-duct: duct 0.23.0 is executing '/home/f008q9c_dartmouth_edu/reproseed/dataset/.pixi/envs/default/bin/python benchmark/run_matrix.py'...
+2026-10-03T19:49:57+0000 [INFO    ] con-duct: Log files will be written to /home/f008q9c_dartmouth_edu/reproseed/dataset/recorded-v2/duct_
+numpy_existing-t1-r1 0
+numpy_existing-t1-r2 0
+numpy_existing-t2-r1 0
+numpy_existing-t2-r2 0
+numpy_existing-t4-r1 0
+numpy_existing-t4-r2 0
+numpy_expected-t1-r1 0
+numpy_expected-t1-r2 0
+numpy_expected-t2-r1 0
+numpy_expected-t2-r2 0
+numpy_expected-t4-r1 0
+numpy_expected-t4-r2 0
+numpy_pr-t1-r1 0
+numpy_pr-t1-r2 0
+numpy_pr-t2-r1 0
+numpy_pr-t2-r2 0
+numpy_pr-t4-r1 0
+numpy_pr-t4-r2 0
+numpy_fixed-t1-r1 0
+numpy_fixed-t1-r2 0
+numpy_fixed-t2-r1 0
+numpy_fixed-t2-r2 0
+numpy_fixed-t4-r1 0
+numpy_fixed-t4-r2 0
+avx512-t1-r1 0
+avx512-t1-r2 0
+avx512-t2-r1 0
+avx512-t2-r2 0
+avx512-t4-r1 0
+avx512-t4-r2 0
+strict_fixed-t1-r1 0
+strict_fixed-t1-r2 0
+strict_fixed-t2-r1 0
+strict_fixed-t2-r2 0
+strict_fixed-t4-r1 0
+strict_fixed-t4-r2 0
+compatible_fixed-t1-r1 0
+compatible_fixed-t1-r2 0
+compatible_fixed-t2-r1 0
+compatible_fixed-t2-r2 0
+compatible_fixed-t4-r1 0
+compatible_fixed-t4-r2 0
+native-t1-r1 0
+native-t1-r2 0
+native-t2-r1 0
+native-t2-r2 0
+native-t4-r1 0
+native-t4-r2 0
+pr-t1-r1 0
+pr-t1-r2 0
+pr-t2-r1 0
+pr-t2-r2 0
+pr-t4-r1 0
+pr-t4-r2 0
+strict-t1-r1 0
+strict-t1-r2 0
+strict-t2-r1 0
+strict-t2-r2 0
+strict-t4-r1 0
+strict-t4-r2 0
+strict_pr-t1-r1 0
+strict_pr-t1-r2 0
+strict_pr-t2-r1 0
+strict_pr-t2-r2 0
+strict_pr-t4-r1 0
+strict_pr-t4-r2 0
+compatible-t1-r1 0
+compatible-t1-r2 0
+compatible-t2-r1 0
+compatible-t2-r2 0
+compatible-t4-r1 0
+compatible-t4-r2 0
+compatible_pr-t1-r1 0
+compatible_pr-t1-r2 0
+compatible_pr-t2-r1 0
+compatible_pr-t2-r2 0
+compatible_pr-t4-r1 0
+compatible_pr-t4-r2 0
+avx2-t1-r1 0
+avx2-t1-r2 0
+avx2-t2-r1 0
+avx2-t2-r2 0
+avx2-t4-r1 0
+avx2-t4-r2 0
+RESULTS=/home/f008q9c_dartmouth_edu/reproseed/dataset/recorded-v2/results
+2026-10-03T19:50:31+0000 [INFO    ] con-duct: Summary:
+Exit Code: 0
+Command: /home/f008q9c_dartmouth_edu/reproseed/dataset/.pixi/envs/default/bin/python benchmark/run_matrix.py
+Log files location: /home/f008q9c_dartmouth_edu/reproseed/dataset/recorded-v2/duct_
+Wall Clock Time: 33.687 sec
+Memory Peak Usage (RSS): 96.1 MB
+Memory Average Usage (RSS): 51.6 MB
+Virtual Memory Peak Usage (VSZ): 743.5 MB
+Virtual Memory Average Usage (VSZ): 251.4 MB
+Memory Peak Percentage: 0.00%
+Memory Average Percentage: 0.00%
+CPU Peak Usage: 265.40%
+Average CPU Usage: 110.68%
+
+Recorded matrix; numerical hashes: recorded-v2/numerical-hashes.json
+[INFO] == Command exit (modification check follows) ===== 
+run.remove(ok): recorded-v2/results/avx2-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx2-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx2-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx2-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx2-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx2-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx512-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx512-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx512-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx512-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx512-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/avx512-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_fixed-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_fixed-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_fixed-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_fixed-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_fixed-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_fixed-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_pr-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_pr-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_pr-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_pr-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_pr-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/compatible_pr-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/native-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/native-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/native-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/native-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/native-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/native-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_existing-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_existing-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_existing-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_existing-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_existing-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_existing-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_expected-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_expected-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_expected-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_expected-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_expected-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_expected-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_fixed-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_fixed-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_fixed-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_fixed-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_fixed-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_fixed-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_pr-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_pr-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_pr-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_pr-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_pr-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/numpy_pr-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/pr-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/pr-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/pr-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/pr-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/pr-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/pr-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_fixed-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_fixed-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_fixed-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_fixed-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_fixed-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_fixed-t4-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_pr-t1-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_pr-t1-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_pr-t2-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_pr-t2-r2/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_pr-t4-r1/outputs.npz (file) [Removed file]
+run.remove(ok): recorded-v2/results/strict_pr-t4-r2/outputs.npz (file) [Removed file]
+run(ok): /home/f008q9c_dartmouth_edu/reproseed/dataset (dataset) [python execute_recorded.py]
+add(ok): recorded-v2/analysis.txt (file)
+add(ok): recorded-v2/duct_info.json (file)
+add(ok): recorded-v2/duct_stdout (file)
+add(ok): recorded-v2/duct_usage.jsonl (file)
+add(ok): recorded-v2/environment.json (file)
+add(ok): recorded-v2/host-cpu.txt (file)
+add(ok): recorded-v2/numerical-hashes.json (file)
+add(ok): recorded-v2/results/avx2-t1-r1/command.json (file)
+add(ok): recorded-v2/results/avx2-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/avx2-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/avx2-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/avx2-t1-r2/command.json (file)
+add(ok): recorded-v2/results/avx2-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/avx2-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/avx2-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/avx2-t2-r1/command.json (file)
+add(ok): recorded-v2/results/avx2-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/avx2-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/avx2-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/avx2-t2-r2/command.json (file)
+add(ok): recorded-v2/results/avx2-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/avx2-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/avx2-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/avx2-t4-r1/command.json (file)
+add(ok): recorded-v2/results/avx2-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/avx2-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/avx2-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/avx2-t4-r2/command.json (file)
+add(ok): recorded-v2/results/avx2-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/avx2-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/avx2-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/avx512-t1-r1/command.json (file)
+add(ok): recorded-v2/results/avx512-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/avx512-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/avx512-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/avx512-t1-r2/command.json (file)
+add(ok): recorded-v2/results/avx512-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/avx512-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/avx512-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/avx512-t2-r1/command.json (file)
+add(ok): recorded-v2/results/avx512-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/avx512-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/avx512-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/avx512-t2-r2/command.json (file)
+add(ok): recorded-v2/results/avx512-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/avx512-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/avx512-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/avx512-t4-r1/command.json (file)
+add(ok): recorded-v2/results/avx512-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/avx512-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/avx512-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/avx512-t4-r2/command.json (file)
+add(ok): recorded-v2/results/avx512-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/avx512-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/avx512-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/comparisons.json (file)
+add(ok): recorded-v2/results/compatible-t1-r1/command.json (file)
+add(ok): recorded-v2/results/compatible-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible-t1-r2/command.json (file)
+add(ok): recorded-v2/results/compatible-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible-t2-r1/command.json (file)
+add(ok): recorded-v2/results/compatible-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible-t2-r2/command.json (file)
+add(ok): recorded-v2/results/compatible-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible-t4-r1/command.json (file)
+add(ok): recorded-v2/results/compatible-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible-t4-r2/command.json (file)
+add(ok): recorded-v2/results/compatible-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r1/command.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r1/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r2/command.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r2/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r1/command.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r1/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r2/command.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r2/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r1/command.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r1/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r2/command.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r2/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_fixed-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r1/command.json (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r1/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r2/command.json (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r2/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r1/command.json (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r1/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r2/command.json (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r2/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r1/command.json (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r1/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r2/command.json (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r2/stderr.txt (file)
+add(ok): recorded-v2/results/compatible_pr-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/native-t1-r1/command.json (file)
+add(ok): recorded-v2/results/native-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/native-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/native-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/native-t1-r2/command.json (file)
+add(ok): recorded-v2/results/native-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/native-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/native-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/native-t2-r1/command.json (file)
+add(ok): recorded-v2/results/native-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/native-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/native-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/native-t2-r2/command.json (file)
+add(ok): recorded-v2/results/native-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/native-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/native-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/native-t4-r1/command.json (file)
+add(ok): recorded-v2/results/native-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/native-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/native-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/native-t4-r2/command.json (file)
+add(ok): recorded-v2/results/native-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/native-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/native-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_existing-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_existing-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_existing-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_expected-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_expected-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_expected-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r1/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r2/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r1/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r2/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r1/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r2/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_fixed-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r1/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r2/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r1/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r2/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r1/command.json (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r1/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r2/command.json (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r2/stderr.txt (file)
+add(ok): recorded-v2/results/numpy_pr-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/pr-t1-r1/command.json (file)
+add(ok): recorded-v2/results/pr-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/pr-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/pr-t1-r1/stderr.txt (file)
+add(ok): recorded-v2/results/pr-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/pr-t1-r2/command.json (file)
+add(ok): recorded-v2/results/pr-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/pr-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/pr-t1-r2/stderr.txt (file)
+add(ok): recorded-v2/results/pr-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/pr-t2-r1/command.json (file)
+add(ok): recorded-v2/results/pr-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/pr-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/pr-t2-r1/stderr.txt (file)
+add(ok): recorded-v2/results/pr-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/pr-t2-r2/command.json (file)
+add(ok): recorded-v2/results/pr-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/pr-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/pr-t2-r2/stderr.txt (file)
+add(ok): recorded-v2/results/pr-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/pr-t4-r1/command.json (file)
+add(ok): recorded-v2/results/pr-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/pr-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/pr-t4-r1/stderr.txt (file)
+add(ok): recorded-v2/results/pr-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/pr-t4-r2/command.json (file)
+add(ok): recorded-v2/results/pr-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/pr-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/pr-t4-r2/stderr.txt (file)
+add(ok): recorded-v2/results/pr-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict-t1-r1/command.json (file)
+add(ok): recorded-v2/results/strict-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict-t1-r2/command.json (file)
+add(ok): recorded-v2/results/strict-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict-t2-r1/command.json (file)
+add(ok): recorded-v2/results/strict-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict-t2-r2/command.json (file)
+add(ok): recorded-v2/results/strict-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict-t4-r1/command.json (file)
+add(ok): recorded-v2/results/strict-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict-t4-r2/command.json (file)
+add(ok): recorded-v2/results/strict-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r1/command.json (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r1/stderr.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r2/command.json (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r2/stderr.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r1/command.json (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r1/stderr.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r2/command.json (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r2/stderr.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r1/command.json (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r1/stderr.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r2/command.json (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r2/stderr.txt (file)
+add(ok): recorded-v2/results/strict_fixed-t4-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict_pr-t1-r1/command.json (file)
+add(ok): recorded-v2/results/strict_pr-t1-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict_pr-t1-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict_pr-t1-r1/stderr.txt (file)
+add(ok): recorded-v2/results/strict_pr-t1-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict_pr-t1-r2/command.json (file)
+add(ok): recorded-v2/results/strict_pr-t1-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict_pr-t1-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict_pr-t1-r2/stderr.txt (file)
+add(ok): recorded-v2/results/strict_pr-t1-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict_pr-t2-r1/command.json (file)
+add(ok): recorded-v2/results/strict_pr-t2-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict_pr-t2-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict_pr-t2-r1/stderr.txt (file)
+add(ok): recorded-v2/results/strict_pr-t2-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict_pr-t2-r2/command.json (file)
+add(ok): recorded-v2/results/strict_pr-t2-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict_pr-t2-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict_pr-t2-r2/stderr.txt (file)
+add(ok): recorded-v2/results/strict_pr-t2-r2/stdout.txt (file)
+add(ok): recorded-v2/results/strict_pr-t4-r1/command.json (file)
+add(ok): recorded-v2/results/strict_pr-t4-r1/metadata.json (file)
+add(ok): recorded-v2/results/strict_pr-t4-r1/outputs.npz (file)
+add(ok): recorded-v2/results/strict_pr-t4-r1/stderr.txt (file)
+add(ok): recorded-v2/results/strict_pr-t4-r1/stdout.txt (file)
+add(ok): recorded-v2/results/strict_pr-t4-r2/command.json (file)
+add(ok): recorded-v2/results/strict_pr-t4-r2/metadata.json (file)
+add(ok): recorded-v2/results/strict_pr-t4-r2/outputs.npz (file)
+add(ok): recorded-v2/results/strict_pr-t4-r2/stderr.txt (file)
+add(ok): recorded-v2/results/strict_pr-t4-r2/stdout.txt (file)
+save(ok): . (dataset)
+action summary:
+  add (ok: 386)
+  get (notneeded: 4)
+  run (ok: 1)
+  run.remove (ok: 84)
+  save (ok: 1)
+  unlock (notneeded: 345)
