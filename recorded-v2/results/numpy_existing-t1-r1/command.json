@@ -1,8 +1,8 @@
 {
   "command": [
-    "/home/leej3/reproseed/.pixi/envs/default/bin/python",
-    "/home/leej3/reproseed/benchmark/probe.py",
-    "/home/leej3/reproseed/recorded-v2/results/numpy_existing-t1-r1"
+    "/home/f008q9c_dartmouth_edu/reproseed/dataset/.pixi/envs/default/bin/python",
+    "/home/f008q9c_dartmouth_edu/reproseed/dataset/benchmark/probe.py",
+    "/home/f008q9c_dartmouth_edu/reproseed/dataset/recorded-v2/results/numpy_existing-t1-r1"
   ],
   "exit": 0
 }
