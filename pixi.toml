@@ -1,0 +1,27 @@
+[workspace]
+channels = ["conda-forge"]
+name = "reproseed"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+benchmark = "datalad run -m numerical-matrix --explicit -i pixi.toml -i pixi.lock -i benchmark -i execute_recorded.py -o recorded python execute_recorded.py"
+reproduce = "datalad rerun benchmark-recorded"
+
+[dependencies]
+python = "==3.13.5"
+git = ">=2.56.0,<3"
+
+[pypi-dependencies]
+datalad = ">=1.6.5, <2"
+git-annex = ">=10.20250721, <11"
+con-duct = ">=0.23.0, <0.24"
+numpy = "==2.4.2"
+threadpoolctl = "==3.6.0"
+mkl = "==2025.2.0"
+mkl-include = "==2025.2.0"
+intel-openmp = "==2025.3.3"
+intel-cmplr-lib-ur = "==2025.3.3"
+tbb = "==2022.3.1"
+tcmlib = "==1.5.0"
+umf = "==1.0.3"

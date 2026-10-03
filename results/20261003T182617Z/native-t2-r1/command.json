@@ -1,0 +1,8 @@
+{
+  "command": [
+    "/home/leej3/reproseed/.venv/bin/python",
+    "/home/leej3/reproseed/probe.py",
+    "/home/leej3/reproseed/results/20261003T182617Z/native-t2-r1"
+  ],
+  "exit": 0
+}

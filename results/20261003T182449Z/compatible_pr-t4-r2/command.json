@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/home/leej3/reproseed/source/reproseed.sh",
+    "/home/leej3/reproseed/.venv/bin/python",
+    "/home/leej3/reproseed/probe.py",
+    "/home/leej3/reproseed/results/20261003T182449Z/compatible_pr-t4-r2"
+  ],
+  "exit": 0
+}

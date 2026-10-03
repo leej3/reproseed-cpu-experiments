@@ -1,0 +1,9 @@
+{
+  "command": [
+    "/home/leej3/reproseed/candidate-reproseed.sh",
+    "/home/leej3/reproseed/.venv/bin/python",
+    "/home/leej3/reproseed/probe.py",
+    "/home/leej3/reproseed/results/20261003T182617Z/compatible_fixed-t1-r2"
+  ],
+  "exit": 0
+}

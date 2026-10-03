@@ -1,0 +1,2 @@
+I: REPROSEED=1 (provided) set for  AFNI ANTs PyMVPA FreeSurfer GSL
+I: reproseed.sh - running /home/leej3/reproseed/.venv/bin/python /home/leej3/reproseed/probe.py /home/leej3/reproseed/results/20261003T182617Z/pr-t1-r1
