@@ -1,0 +1,1 @@
+{"out": "/home/leej3/reproseed-followup-20261004/followup-results/torch/pr9-t4-b0", "medians": {"torch_mm1024": 0.005954737464586894, "torch_exp32": 0.00012132449831702922, "torch_conv2d": 0.001868720187081231, "torch_conv3d": 0.006369907098511855}}

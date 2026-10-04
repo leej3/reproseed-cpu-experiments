@@ -1,0 +1,1 @@
+{"out": "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx512-t4-b0", "medians": {"torch_mm1024": 0.003421078436076641, "torch_exp32": 0.00010539172948655033, "torch_conv2d": 0.001910787589591125, "torch_conv3d": 0.0038061140105128287}}

@@ -1,0 +1,710 @@
+[
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/candidate-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx512-t4-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "strict_avx512",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx2-t1-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "strict_avx2",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/candidate-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx512-t1-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "strict_avx512",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/pr9-t4-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "pr9",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t4-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "compatible",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/native-t4-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "native",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/avx2_explicit-t4-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "avx2_explicit",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx2-t4-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "strict_avx2",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/avx2_explicit-t1-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "avx2_explicit",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t1-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "compatible",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/native-t1-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "native",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/pr9-t1-b0",
+      "--torch",
+      "--save-arrays"
+    ],
+    "case": "pr9",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/native-t4-b1",
+      "--torch"
+    ],
+    "case": "native",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/avx2_explicit-t4-b1",
+      "--torch"
+    ],
+    "case": "avx2_explicit",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/pr9-t4-b1",
+      "--torch"
+    ],
+    "case": "pr9",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/candidate-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx512-t1-b1",
+      "--torch"
+    ],
+    "case": "strict_avx512",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t4-b1",
+      "--torch"
+    ],
+    "case": "compatible",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx2-t4-b1",
+      "--torch"
+    ],
+    "case": "strict_avx2",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/native-t1-b1",
+      "--torch"
+    ],
+    "case": "native",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/pr9-t1-b1",
+      "--torch"
+    ],
+    "case": "pr9",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/avx2_explicit-t1-b1",
+      "--torch"
+    ],
+    "case": "avx2_explicit",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/candidate-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx512-t4-b1",
+      "--torch"
+    ],
+    "case": "strict_avx512",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx2-t1-b1",
+      "--torch"
+    ],
+    "case": "strict_avx2",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t1-b1",
+      "--torch"
+    ],
+    "case": "compatible",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t4-b2",
+      "--torch"
+    ],
+    "case": "compatible",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/pr9-t1-b2",
+      "--torch"
+    ],
+    "case": "pr9",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/candidate-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx512-t4-b2",
+      "--torch"
+    ],
+    "case": "strict_avx512",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/native-t1-b2",
+      "--torch"
+    ],
+    "case": "native",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/candidate-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx512-t1-b2",
+      "--torch"
+    ],
+    "case": "strict_avx512",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx2-t1-b2",
+      "--torch"
+    ],
+    "case": "strict_avx2",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/avx2_explicit-t1-b2",
+      "--torch"
+    ],
+    "case": "avx2_explicit",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/pr9-t4-b2",
+      "--torch"
+    ],
+    "case": "pr9",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/strict_avx2-t4-b2",
+      "--torch"
+    ],
+    "case": "strict_avx2",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t1-b2",
+      "--torch"
+    ],
+    "case": "compatible",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/native-t4-b2",
+      "--torch"
+    ],
+    "case": "native",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,1,2,3",
+      "/home/leej3/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python",
+      "/home/leej3/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/leej3/reproseed-followup-20261004/followup-results/torch/avx2_explicit-t4-b2",
+      "--torch"
+    ],
+    "case": "avx2_explicit",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      1,
+      2,
+      3
+    ]
+  }
+]

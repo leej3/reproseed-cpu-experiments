@@ -1,0 +1,1 @@
+{"out": "/home/leej3/reproseed-followup-20261004/followup-results/torch/avx2_explicit-t4-b2", "medians": {"torch_mm1024": 0.00596549113591512, "torch_exp32": 0.0001349239805473849, "torch_conv2d": 0.0018178089945153756, "torch_conv3d": 0.006247555837035179}}

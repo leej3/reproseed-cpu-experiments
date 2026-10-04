@@ -1,0 +1,2 @@
+I: REPROSEED=6522 (random) set for  AFNI ANTs PyMVPA FreeSurfer GSL
+I: reproseed.sh - running /home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python /home/leej3/reproseed-followup-20261004/benchmark/performance.py /home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t4-b1 --torch

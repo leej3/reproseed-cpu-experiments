@@ -1,0 +1,1 @@
+{"out": "/home/leej3/reproseed-followup-20261004/followup-results/torch/compatible-t1-b2", "medians": {"torch_mm1024": 0.08238759264349937, "torch_exp32": 0.00104602502837573, "torch_conv2d": 0.006693781776861711, "torch_conv3d": 0.020513268808523815}}
