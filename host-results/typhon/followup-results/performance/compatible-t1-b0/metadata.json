@@ -1,0 +1,213 @@
+{
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "REPROSEED": "17371",
+    "MKL_DYNAMIC": "FALSE",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "DNNL_MAX_CPU_ISA": "AVX2",
+    "REPROSEED_CPU": "x86-64-v3",
+    "OMP_PROC_BIND": "close",
+    "MKL_CBWR": "COMPATIBLE",
+    "ONEDNN_MAX_CPU_ISA": "AVX2",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_INTERFACE_LAYER": "LP64",
+    "NPY_DISABLE_CPU_FEATURES": "AVX512F AVX512_SKX AVX512_ICL AVX512_SPR X86_V4"
+  },
+  "affinity": [
+    0
+  ],
+  "loadavg": [
+    5.72412109375,
+    5.10693359375,
+    4.97509765625
+  ],
+  "numpy": "2.4.2",
+  "mkl_cbwr_raw": 3,
+  "mkl_version": "Intel(R) oneAPI Math Kernel Library Version 2025.2-Product Build 20250620 for Intel(R) 64 architecture applications",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-096271d3.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "mkl",
+      "num_threads": 1,
+      "prefix": "libmkl_rt",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/libmkl_rt.so.2",
+      "version": "2025.2-Product",
+      "threading_layer": "intel"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/libiomp5.so",
+      "version": null
+    }
+  ],
+  "inputs": {
+    "mkl_1024_1024_1024": [
+      "0ebe81f595081c8bd98b1d89a184e3e1332a85a6ccc017e06457de7119592276",
+      "09c46044a79dde25c3368729359ebb97af935d8bc48eca68785f2f285d467fce"
+    ],
+    "mkl_256_4096_256": [
+      "79377cfcb5778f6a04007043ba61d144ce1236a81174eaf975a421060ea1eb71",
+      "8971a312546ce090aea49f22d385f06e7d296c4b912858da0abe1e8a00104cbe"
+    ],
+    "mkl_8_8193_8": [
+      "97e5897b2ea1644be483dd10dead586360593be80908e45391358737d8ffd7ff",
+      "d6527b2c299ccf036b69b216c0a615dd0e33fa0f42f601d826f96785a78da59a"
+    ],
+    "openblas1024": [
+      "406d65d0211355d39b73c81792c524fa8d061bd6c2f22d1f14248f3f62be0531",
+      "ae23a161c90890630b280ccf940d22be6f203aa71968cbcd17dae5467d3c78b8"
+    ],
+    "numpy_exp32": [
+      "7324d952714e772a8abaa7e9645d8f7bf12f60fed48147f82bfc951cffa6bc99"
+    ]
+  },
+  "measurements": {
+    "mkl_1024_1024_1024": {
+      "seconds": [
+        0.20515040680766106,
+        0.2072550132870674,
+        0.20330018177628517,
+        0.20014385506510735,
+        0.20109062269330025,
+        0.20265789702534676,
+        0.20309414714574814
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.20309414714574814,
+      "min_seconds": 0.20014385506510735,
+      "max_seconds": 0.2072550132870674,
+      "relative_mad": 0.00986500340164941,
+      "output_hashes": [
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_256_4096_256": {
+      "seconds": [
+        0.05185045674443245,
+        0.0515509732067585,
+        0.05120701715350151,
+        0.05187571793794632,
+        0.05286111310124397,
+        0.05311109870672226,
+        0.050933919847011566
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.05185045674443245,
+      "min_seconds": 0.050933919847011566,
+      "max_seconds": 0.05311109870672226,
+      "relative_mad": 0.012409525997088337,
+      "output_hashes": [
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_8_8193_8": {
+      "seconds": [
+        0.00018343077098750414,
+        0.00018413604431075962,
+        0.0001834534296181982,
+        0.0001786488025221181,
+        0.0001804890277320242,
+        0.00018388477049648626,
+        0.00018009518697278178
+      ],
+      "iterations_per_sample": 437,
+      "median_seconds": 0.00018343077098750414,
+      "min_seconds": 0.0001786488025221181,
+      "max_seconds": 0.00018413604431075962,
+      "relative_mad": 0.0038449019183565834,
+      "output_hashes": [
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a"
+      ],
+      "repeat_identical": true
+    },
+    "openblas1024": {
+      "seconds": [
+        0.0441579669713974,
+        0.044413577765226364,
+        0.04437614977359772,
+        0.044471900910139084,
+        0.04430081695318222,
+        0.044141098856925964,
+        0.044230177998542786
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.04430081695318222,
+      "min_seconds": 0.044141098856925964,
+      "max_seconds": 0.044471900910139084,
+      "relative_mad": 0.0025453438514082263,
+      "output_hashes": [
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237"
+      ],
+      "repeat_identical": true
+    },
+    "numpy_exp32": {
+      "seconds": [
+        0.0009195119650526481,
+        0.0009252888743172992,
+        0.0009528653357516636,
+        0.0009232404303144325,
+        0.0009084028953855687,
+        0.0012206138873642142,
+        0.0010059458965604956
+      ],
+      "iterations_per_sample": 88,
+      "median_seconds": 0.0009252888743172992,
+      "min_seconds": 0.0009084028953855687,
+      "max_seconds": 0.0012206138873642142,
+      "relative_mad": 0.018249413129698973,
+      "output_hashes": [
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc"
+      ],
+      "repeat_identical": true
+    }
+  }
+}

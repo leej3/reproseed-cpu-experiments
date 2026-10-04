@@ -1,0 +1,561 @@
+[
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/avx2_explicit-t1-b0",
+      "--save-arrays"
+    ],
+    "case": "avx2_explicit",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/strict_avx2-t1-b0",
+      "--save-arrays"
+    ],
+    "case": "strict_avx2",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/compatible-t4-b0",
+      "--save-arrays"
+    ],
+    "case": "compatible",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/native-t4-b0",
+      "--save-arrays"
+    ],
+    "case": "native",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/avx2_explicit-t4-b0",
+      "--save-arrays"
+    ],
+    "case": "avx2_explicit",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/strict_avx2-t4-b0",
+      "--save-arrays"
+    ],
+    "case": "strict_avx2",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/pr9-t4-b0",
+      "--save-arrays"
+    ],
+    "case": "pr9",
+    "threads": 4,
+    "block": 0,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/compatible-t1-b0",
+      "--save-arrays"
+    ],
+    "case": "compatible",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/native-t1-b0",
+      "--save-arrays"
+    ],
+    "case": "native",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/pr9-t1-b0",
+      "--save-arrays"
+    ],
+    "case": "pr9",
+    "threads": 1,
+    "block": 0,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/compatible-t4-b1"
+    ],
+    "case": "compatible",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/pr9-t1-b1"
+    ],
+    "case": "pr9",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/avx2_explicit-t1-b1"
+    ],
+    "case": "avx2_explicit",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/avx2_explicit-t4-b1"
+    ],
+    "case": "avx2_explicit",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/native-t1-b1"
+    ],
+    "case": "native",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/native-t4-b1"
+    ],
+    "case": "native",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/pr9-t4-b1"
+    ],
+    "case": "pr9",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/strict_avx2-t4-b1"
+    ],
+    "case": "strict_avx2",
+    "threads": 4,
+    "block": 1,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/strict_avx2-t1-b1"
+    ],
+    "case": "strict_avx2",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/compatible-t1-b1"
+    ],
+    "case": "compatible",
+    "threads": 1,
+    "block": 1,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/pr9-t4-b2"
+    ],
+    "case": "pr9",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/native-t1-b2"
+    ],
+    "case": "native",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/avx2_explicit-t1-b2"
+    ],
+    "case": "avx2_explicit",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/compatible-t4-b2"
+    ],
+    "case": "compatible",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/strict_avx2-t1-b2"
+    ],
+    "case": "strict_avx2",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/strict_avx2-t4-b2"
+    ],
+    "case": "strict_avx2",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/upstream-reproseed.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/pr9-t1-b2"
+    ],
+    "case": "pr9",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/compatible-t1-b2"
+    ],
+    "case": "compatible",
+    "threads": 1,
+    "block": 2,
+    "cpu_affinity": [
+      0
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/native-t4-b2"
+    ],
+    "case": "native",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  },
+  {
+    "command": [
+      "taskset",
+      "-c",
+      "0,2,6,8",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/compatible-default.sh",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/bin/python",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/benchmark/performance.py",
+      "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/followup-results/performance/avx2_explicit-t4-b2"
+    ],
+    "case": "avx2_explicit",
+    "threads": 4,
+    "block": 2,
+    "cpu_affinity": [
+      0,
+      2,
+      6,
+      8
+    ]
+  }
+]

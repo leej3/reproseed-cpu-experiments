@@ -1,0 +1,2184 @@
+{
+  "native": [
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "numpy_exp",
+        "numpy_log",
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    }
+  ],
+  "pr": [
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    }
+  ],
+  "compatible_fixed": [
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_8_8193_8"
+      ]
+    }
+  ],
+  "strict_fixed": [
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "typhon",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": []
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "typhon",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "smaug",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        1
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm",
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "smaug",
+        4
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "mkl_257_513_193",
+        "mkl_8_8193_8",
+        "mkl_129_2049_65",
+        "mkl_513_513_513"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        2
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        1
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    },
+    {
+      "a": [
+        "unity",
+        2
+      ],
+      "b": [
+        "unity",
+        4
+      ],
+      "differing_arrays": [
+        "openblas_gemm"
+      ]
+    }
+  ]
+}

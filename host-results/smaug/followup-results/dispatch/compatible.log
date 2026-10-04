@@ -1,0 +1,17 @@
+I: REPROSEED=13804 (random) set for  AFNI ANTs PyMVPA FreeSurfer GSL
+I: reproseed.sh - running /home/leej3/reproseed-followup-20261004/.pixi/envs/torch/bin/python benchmark/dispatch.py
+torch 2.9.1+cpu ATen AVX2
+MKL_VERBOSE oneMKL 2024.0 Update 2 Product build 20240605 for Intel(R) 64 architecture Intel(R) Architecture processors, Lnx 3.00GHz lp64 gnu_thread
+MKL_VERBOSE SGEMM(N,N,1024,1024,1024,0x7fff4bb51770,0x7fcb4c128040,1024,0x7fcb4c529040,1024,0x7fff4bb51790,0x7fcb4bd27040,1024) 84.25ms CNR:COMPATIBLE Dyn:0 FastMM:1 TID:0  NThr:1
+onednn_verbose,v1,info,oneDNN v3.7.1 (commit 8d263e693366ef8db40acc569cc7d8edf644556d)
+onednn_verbose,v1,info,cpu,runtime:OpenMP,nthr:1
+onednn_verbose,v1,info,cpu,isa:Intel AVX2
+onednn_verbose,v1,info,gpu,runtime:none
+onednn_verbose,v1,info,graph,backend,0:dnnl_backend
+onednn_verbose,v1,primitive,info,template:operation,engine,primitive,implementation,prop_kind,memory_descriptors,attributes,auxiliary,problem_desc,exec_time
+onednn_verbose,v1,graph,info,template:operation,engine,partition_id,partition_kind,op_names,data_formats,logical_tensors,fpmath_mode,implementation,backend,exec_time
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:blk,undef,src:f32::blocked:abcd::f0 dst:f32::blocked:aBcd8b::f0,attr-scratchpad:user,,4x32x64x64,1.13501
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:uni,undef,src:f32::blocked:abcd::f0 dst:f32::blocked:ABcd8b8a::f0,attr-scratchpad:user,,64x32x3x3,0.0390625
+onednn_verbose,v1,primitive,exec,cpu,convolution,jit:avx2,forward_training,src:f32:a:blocked:aBcd8b::f0 wei:f32:a:blocked:ABcd8b8a::f0 bia:undef::undef::: dst:f32:a:blocked:aBcd8b::f0,attr-scratchpad:user,alg:convolution_direct,mb4_ic32oc64_ih64oh64kh3sh1dh0ph1_iw64ow64kw3sw1dw0pw1,7.78613
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:blk,undef,src:f32::blocked:aBcd8b::f0 dst:f32::blocked:abcd::f0,attr-scratchpad:user,,4x64x64x64,1.90796
+MKL_VERBOSE SGEMM(N,N,32768,16,216,0x7fff4bb50220,0x7fcb4a226040,32768,0x5609082f75c0,216,0x7fff4bb50240,0x56090840a1c0,32768) 15.05ms CNR:COMPATIBLE Dyn:0 FastMM:1 TID:0  NThr:1

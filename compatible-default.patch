@@ -1,0 +1,105 @@
+diff --git a/docs/cpu-features.md b/docs/cpu-features.md
+index bc3ed63..c5e1b46 100644
+--- a/docs/cpu-features.md
++++ b/docs/cpu-features.md
+@@ -16,7 +16,7 @@ following variables are exported:
+ |--------------------------|-------------------------------------------|-------------|
+ | [NumPy][numpy]           | [`NPY_DISABLE_CPU_FEATURES`][npy-disable] | see below   |
+ | [OpenBLAS][openblas]     | [`OPENBLAS_CORETYPE`][openblas-vars]      | `Haswell`   |
+-| [MKL][mkl]               | [`MKL_CBWR`][mkl-cbwr]                    | `AVX2`      |
++| [MKL][mkl]               | [`MKL_CBWR`][mkl-cbwr]                    | `COMPATIBLE` |
+ | [PyTorch][pytorch]       | [`ATEN_CPU_CAPABILITY`][aten-cpu]         | `avx2`      |
+ | [oneDNN][onednn]         | [`ONEDNN_MAX_CPU_ISA`][onednn-isa]        | `AVX2`      |
+ | [oneDNN][onednn] < 2.5   | [`DNNL_MAX_CPU_ISA`][dnnl-isa]            | `AVX2`      |
+@@ -40,7 +40,10 @@ following variables are exported:
+ - oneDNN is used by PyTorch and [TensorFlow][tensorflow]. Its environment cap
+   takes effect only when built with `ONEDNN_ENABLE_MAX_CPU_ISA=ON`; see the
+   [dispatcher build and runtime controls][onednn-isa].
+-- An explicit `MKL_CBWR` is preserved, including `AVX2,STRICT` and
++- MKL defaults to `COMPATIBLE`, its cross-vendor SSE2 CNR branch. Keep the
++  thread count fixed; this mode does not provide strict CNR across thread counts
++  and can be slower than AVX2. An explicit `MKL_CBWR` is preserved, including
++  `AVX2`, `AVX2,STRICT`, and
+   `COMPATIBLE`. Settings outside the recognized AVX2-or-lower branches produce
+   a warning because they may defeat a common CPU profile. Unknown values are
+   preserved but are not validated by reproseed. Intel documents non-`AUTO`/
+diff --git a/reproseed.sh b/reproseed.sh
+index d12fc03..eefa7e0 100755
+--- a/reproseed.sh
++++ b/reproseed.sh
+@@ -102,7 +102,7 @@ while read -r _how _var _value; do
+ done << EOF
+ limit NPY_DISABLE_CPU_FEATURES AVX512F AVX512_SKX AVX512_ICL AVX512_SPR X86_V4
+ force OPENBLAS_CORETYPE Haswell
+-limit MKL_CBWR AVX2
++limit MKL_CBWR COMPATIBLE
+ force ATEN_CPU_CAPABILITY avx2
+ limit ONEDNN_MAX_CPU_ISA AVX2
+ limit DNNL_MAX_CPU_ISA AVX2
+diff --git a/tests/test_basic.sh b/tests/test_basic.sh
+index c1a6df2..e04981d 100755
+--- a/tests/test_basic.sh
++++ b/tests/test_basic.sh
+@@ -82,7 +82,7 @@ refute_cpu_vars() {
+ 	case "$(uname -m)" in x86_64) ;; *) skip "not x86_64";; esac
+ 	. $REPROSEED_CMD
+ 	[ "$REPROSEED_CPU" = "x86-64-v3" ]
+-	[ "$MKL_CBWR" = "AVX2" ]
++	[ "$MKL_CBWR" = "COMPATIBLE" ]
+ 	[ "$ONEDNN_MAX_CPU_ISA" = "AVX2" ]
+ 	if grep -qw avx512f /proc/cpuinfo; then
+ 		echo "$NPY_DISABLE_CPU_FEATURES" | grep -qw AVX512_SKX
+@@ -100,7 +100,7 @@ refute_cpu_vars() {
+ 	echo "$out" | grep -qx 'REPROSEED_CPU=x86-64-v3'
+ 	echo "$out" | grep -qx 'NPY_DISABLE_CPU_FEATURES=AVX512F AVX512_SKX AVX512_ICL AVX512_SPR X86_V4'
+ 	echo "$out" | grep -qx 'OPENBLAS_CORETYPE=Haswell'
+-	echo "$out" | grep -qx 'MKL_CBWR=AVX2'
++	echo "$out" | grep -qx 'MKL_CBWR=COMPATIBLE'
+ 	echo "$out" | grep -qx 'ATEN_CPU_CAPABILITY=avx2'
+ 	echo "$out" | grep -qx 'ONEDNN_MAX_CPU_ISA=AVX2'
+ 	echo "$out" | grep -qx 'DNNL_MAX_CPU_ISA=AVX2'
+@@ -113,7 +113,7 @@ refute_cpu_vars() {
+ 		fake_cpuinfo "$flags"
+ 		out=$(run_faked)
+ 		echo "$out" | grep -q 'W: could not confirm that CPU supports x86-64-v3 (AVX2, FMA), not setting OPENBLAS_CORETYPE ATEN_CPU_CAPABILITY;'
+-		echo "$out" | grep -qx 'MKL_CBWR=AVX2'
++		echo "$out" | grep -qx 'MKL_CBWR=COMPATIBLE'
+ 		echo "$out" | grep -qx 'ONEDNN_MAX_CPU_ISA=AVX2'
+ 		[ "$(echo "$out" | grep -cE '^(OPENBLAS_CORETYPE|ATEN_CPU_CAPABILITY)=')" -eq 0 ]
+ 	done
+@@ -152,7 +152,7 @@ refute_cpu_vars() {
+ 	fake uname 'echo x86_64'
+ 	fake_cpuinfo 'avx avx2 fma'
+ 	out=$(run_faked)
+-	echo "$out" | grep -qx 'MKL_CBWR=AVX2'
++	echo "$out" | grep -qx 'MKL_CBWR=COMPATIBLE'
+ 	[ "$(echo "$out" | grep -c '^NPY_DISABLE_CPU_FEATURES=')" -eq 0 ]
+ }
+ 
+@@ -161,7 +161,7 @@ refute_cpu_vars() {
+ 	fake_cpuinfo 'avx avx2 fma avx512f'
+ 	out=$(NPY_ENABLE_CPU_FEATURES=X86_V3 run_faked)
+ 	echo "$out" | grep -q 'W: NPY_ENABLE_CPU_FEATURES is set, not setting NPY_DISABLE_CPU_FEATURES'
+-	echo "$out" | grep -qx 'MKL_CBWR=AVX2'
++	echo "$out" | grep -qx 'MKL_CBWR=COMPATIBLE'
+ 	[ "$(echo "$out" | grep -c '^NPY_DISABLE_CPU_FEATURES=')" -eq 0 ]
+ }
+ 
+@@ -175,7 +175,7 @@ refute_cpu_vars() {
+ @test "source under set -eu" {
+ 	fake uname 'echo x86_64'
+ 	out=$(PATH="$fakebin:$PATH" sh -c "set -eu; REPROSEED=1; . $REPROSEED_CMD; echo MKL_CBWR=\$MKL_CBWR")
+-	echo "$out" | grep -qx 'MKL_CBWR=AVX2'
++	echo "$out" | grep -qx 'MKL_CBWR=COMPATIBLE'
+ }
+ 
+ @test "cpu warnings go to stderr only" {
+@@ -188,7 +188,7 @@ refute_cpu_vars() {
+ @test "explicit compatible MKL settings are preserved without warning" {
+     fake uname 'echo x86_64'
+     fake_cpuinfo 'avx avx2 fma avx512f'
+-    for value in AVX2,STRICT COMPATIBLE BRANCH=AVX2,STRICT; do
++    for value in AVX2 AVX2,STRICT COMPATIBLE BRANCH=AVX2 BRANCH=AVX2,STRICT; do
+         out=$(MKL_CBWR="$value" run_faked)
+         echo "$out" | grep -qx "MKL_CBWR=$value"
+         ! echo "$out" | grep -q '^W:'

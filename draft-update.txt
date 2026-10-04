@@ -1,0 +1,11 @@
+AI draft - not reviewed by John
+
+The follow-up compares PR 9's AVX2 settings with a local candidate that changes PR 11's MKL default to COMPATIBLE while preserving explicit AVX2 and AVX2,STRICT overrides. Neither public PR has been changed.
+
+On two Intel hosts and a Unity AMD node, COMPATIBLE makes all nine newly tested NumPy/OpenBLAS/MKL/PyTorch outputs agree at each fixed thread count. PR 9's settings leave Intel/AMD differences in the three MKL products and PyTorch exp and 3-D convolution. COMPATIBLE does not remove thread-count dependence: the skinny MKL product still differs between one and four threads, consistent with Intel's standard CNR conditions.
+
+The cost is substantial for some operations: the larger MKL products take approximately 3.9–4.7x as long as PR 9's configuration; PyTorch matrix multiplication takes 3.1–3.9x as long. The tested oneDNN 2-D convolution is essentially unchanged. These are warmed native compute timings, not startup timings or a universal workflow slowdown.
+
+For a default intended to reproduce across Intel and AMD at fixed thread counts, I recommend COMPATIBLE, with explicit AVX2/AVX2,STRICT choices retained for Intel workloads. The local patch updates the MKL default, its tests, and the directly affected documentation only. ShellCheck and all 21 tests pass. This recommendation accepts a measured throughput cost; AVX2,STRICT remains the better tested choice for Intel GEMM reproducibility across changing thread counts.
+
+Evidence is recorded locally with pinned Pixi environments and DataLad run/rerun on Typhon, Smaug, and Unity. Publication and any change to PR 11 await John's approval.

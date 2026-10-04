@@ -1,0 +1,212 @@
+{
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "REPROSEED": "10663",
+    "MKL_DYNAMIC": "FALSE",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "DNNL_MAX_CPU_ISA": "AVX2",
+    "REPROSEED_CPU": "x86-64-v3",
+    "OMP_PROC_BIND": "close",
+    "MKL_CBWR": "COMPATIBLE",
+    "ONEDNN_MAX_CPU_ISA": "AVX2",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_INTERFACE_LAYER": "LP64"
+  },
+  "affinity": [
+    0
+  ],
+  "loadavg": [
+    2.93896484375,
+    1.578125,
+    0.9052734375
+  ],
+  "numpy": "2.4.2",
+  "mkl_cbwr_raw": 3,
+  "mkl_version": "Intel(R) oneAPI Math Kernel Library Version 2025.2-Product Build 20250620 for Intel(R) 64 architecture applications",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-096271d3.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "mkl",
+      "num_threads": 1,
+      "prefix": "libmkl_rt",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/libmkl_rt.so.2",
+      "version": "2025.2-Product",
+      "threading_layer": "intel"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/libiomp5.so",
+      "version": null
+    }
+  ],
+  "inputs": {
+    "mkl_1024_1024_1024": [
+      "0ebe81f595081c8bd98b1d89a184e3e1332a85a6ccc017e06457de7119592276",
+      "09c46044a79dde25c3368729359ebb97af935d8bc48eca68785f2f285d467fce"
+    ],
+    "mkl_256_4096_256": [
+      "79377cfcb5778f6a04007043ba61d144ce1236a81174eaf975a421060ea1eb71",
+      "8971a312546ce090aea49f22d385f06e7d296c4b912858da0abe1e8a00104cbe"
+    ],
+    "mkl_8_8193_8": [
+      "97e5897b2ea1644be483dd10dead586360593be80908e45391358737d8ffd7ff",
+      "d6527b2c299ccf036b69b216c0a615dd0e33fa0f42f601d826f96785a78da59a"
+    ],
+    "openblas1024": [
+      "406d65d0211355d39b73c81792c524fa8d061bd6c2f22d1f14248f3f62be0531",
+      "ae23a161c90890630b280ccf940d22be6f203aa71968cbcd17dae5467d3c78b8"
+    ],
+    "numpy_exp32": [
+      "7324d952714e772a8abaa7e9645d8f7bf12f60fed48147f82bfc951cffa6bc99"
+    ]
+  },
+  "measurements": {
+    "mkl_1024_1024_1024": {
+      "seconds": [
+        0.24702083691954613,
+        0.2155437245965004,
+        0.21541909500956535,
+        0.21618184447288513,
+        0.21544065698981285,
+        0.21543898060917854,
+        0.21815423667430878
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.2155437245965004,
+      "min_seconds": 0.21541909500956535,
+      "max_seconds": 0.24702083691954613,
+      "relative_mad": 0.0005782102316750392,
+      "output_hashes": [
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a",
+        "a7f80bf74345ff012f05762cff79c06ae8c356233a5bbe1278a353cb2bdbd41a"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_256_4096_256": {
+      "seconds": [
+        0.05425255373120308,
+        0.054246675223112106,
+        0.05421467497944832,
+        0.05426935479044914,
+        0.054268188774585724,
+        0.0541665256023407,
+        0.05425873026251793
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.05425255373120308,
+      "min_seconds": 0.0541665256023407,
+      "max_seconds": 0.05426935479044914,
+      "relative_mad": 0.00028818999857793307,
+      "output_hashes": [
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7",
+        "bafe69985271b09c5ded7579d6f873529f181f9e37228f6da5cb0a0732eef2b7"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_8_8193_8": {
+      "seconds": [
+        0.00022183218970894814,
+        0.000221755707429515,
+        0.0002222514297399256,
+        0.0002217109211617046,
+        0.00022164649433559843,
+        0.00022147861826750967,
+        0.00022149252601795727
+      ],
+      "iterations_per_sample": 360,
+      "median_seconds": 0.0002217109211617046,
+      "min_seconds": 0.00022147861826750967,
+      "max_seconds": 0.0002222514297399256,
+      "relative_mad": 0.0005469669541225957,
+      "output_hashes": [
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a",
+        "4ea92d85d89c22a7c0939d99abf67f4c9d7edabe2bbfbea01b559d665d97cc8a"
+      ],
+      "repeat_identical": true
+    },
+    "openblas1024": {
+      "seconds": [
+        0.046539418399333954,
+        0.057944491505622864,
+        0.04753921180963516,
+        0.046691060066223145,
+        0.04666997119784355,
+        0.04666459187865257,
+        0.046722762286663055
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.046691060066223145,
+      "min_seconds": 0.046539418399333954,
+      "max_seconds": 0.057944491505622864,
+      "relative_mad": 0.0006789783824772195,
+      "output_hashes": [
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237"
+      ],
+      "repeat_identical": true
+    },
+    "numpy_exp32": {
+      "seconds": [
+        0.0014538034796714784,
+        0.0014557110315019434,
+        0.0014654614708640358,
+        0.0015377765352075751,
+        0.0014664177867499265,
+        0.0014514632523059845,
+        0.0014533674852414565
+      ],
+      "iterations_per_sample": 55,
+      "median_seconds": 0.0014557110315019434,
+      "min_seconds": 0.0014514632523059845,
+      "max_seconds": 0.0015377765352075751,
+      "relative_mad": 0.0029180098962196706,
+      "output_hashes": [
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc"
+      ],
+      "repeat_identical": true
+    }
+  }
+}

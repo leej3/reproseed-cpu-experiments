@@ -5,6 +5,9 @@ platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
+compare-followup = "datalad run -m compare-native-and-torch-hosts --explicit -i host-results -i analyze_followup.py -i followup-provenance.json -o followup-summary.json -o analysis.txt sh -c 'python analyze_followup.py > analysis.txt'"
+reproduce-performance = "datalad rerun 9367368"
+
 existing-analysis = "datalad run -m cross-thread-host-analysis --explicit -i cross-host-inputs -i analyze_existing.py -o followup-results/existing-cross-thread-host.json python analyze_existing.py"
 performance = "datalad run -m native-compute-performance --explicit -i pixi.toml -i pixi.lock -i benchmark -o followup-results/performance python benchmark/run_performance.py"
 torch-performance = "datalad run -m torch-compute-performance --explicit -i pixi.toml -i pixi.lock -i benchmark -o followup-results/torch python benchmark/run_performance.py --torch"
@@ -39,3 +42,6 @@ torch = { version = "==2.9.1+cpu", index = "https://download.pytorch.org/whl/cpu
 [environments]
 default = { features = [], solve-group = "main" }
 torch = { features = ["torch"], solve-group = "main" }
+
+[feature.torch.tasks]
+reproduce-torch = "datalad rerun cdbe0ad921eb7acb4600726c60eb07e619eae459"

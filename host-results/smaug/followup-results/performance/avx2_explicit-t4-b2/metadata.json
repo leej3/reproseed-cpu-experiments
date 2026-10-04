@@ -1,0 +1,215 @@
+{
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "REPROSEED": "17263",
+    "MKL_DYNAMIC": "FALSE",
+    "OPENBLAS_NUM_THREADS": "4",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "DNNL_MAX_CPU_ISA": "AVX2",
+    "REPROSEED_CPU": "x86-64-v3",
+    "OMP_PROC_BIND": "close",
+    "MKL_CBWR": "AVX2",
+    "ONEDNN_MAX_CPU_ISA": "AVX2",
+    "MKL_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "MKL_INTERFACE_LAYER": "LP64"
+  },
+  "affinity": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "loadavg": [
+    3.08251953125,
+    1.904296875,
+    1.07861328125
+  ],
+  "numpy": "2.4.2",
+  "mkl_cbwr_raw": 10,
+  "mkl_version": "Intel(R) oneAPI Math Kernel Library Version 2025.2-Product Build 20250620 for Intel(R) 64 architecture applications",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 4,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-096271d3.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "mkl",
+      "num_threads": 4,
+      "prefix": "libmkl_rt",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/libmkl_rt.so.2",
+      "version": "2025.2-Product",
+      "threading_layer": "intel"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 4,
+      "prefix": "libiomp",
+      "filepath": "/home/leej3/reproseed-followup-20261004/.pixi/envs/default/lib/libiomp5.so",
+      "version": null
+    }
+  ],
+  "inputs": {
+    "mkl_1024_1024_1024": [
+      "0ebe81f595081c8bd98b1d89a184e3e1332a85a6ccc017e06457de7119592276",
+      "09c46044a79dde25c3368729359ebb97af935d8bc48eca68785f2f285d467fce"
+    ],
+    "mkl_256_4096_256": [
+      "79377cfcb5778f6a04007043ba61d144ce1236a81174eaf975a421060ea1eb71",
+      "8971a312546ce090aea49f22d385f06e7d296c4b912858da0abe1e8a00104cbe"
+    ],
+    "mkl_8_8193_8": [
+      "97e5897b2ea1644be483dd10dead586360593be80908e45391358737d8ffd7ff",
+      "d6527b2c299ccf036b69b216c0a615dd0e33fa0f42f601d826f96785a78da59a"
+    ],
+    "openblas1024": [
+      "406d65d0211355d39b73c81792c524fa8d061bd6c2f22d1f14248f3f62be0531",
+      "ae23a161c90890630b280ccf940d22be6f203aa71968cbcd17dae5467d3c78b8"
+    ],
+    "numpy_exp32": [
+      "7324d952714e772a8abaa7e9645d8f7bf12f60fed48147f82bfc951cffa6bc99"
+    ]
+  },
+  "measurements": {
+    "mkl_1024_1024_1024": {
+      "seconds": [
+        0.01349826082587242,
+        0.013500640541315079,
+        0.013513930886983872,
+        0.013499128073453904,
+        0.013496005535125732,
+        0.013500414788722992,
+        0.013511095196008682
+      ],
+      "iterations_per_sample": 5,
+      "median_seconds": 0.013500414788722992,
+      "min_seconds": 0.013496005535125732,
+      "max_seconds": 0.013513930886983872,
+      "relative_mad": 0.0001595479016222965,
+      "output_hashes": [
+        "065a29bcbf59365af5049f774555ed4f2b04bc8bd243b87d877117617c4623d3",
+        "065a29bcbf59365af5049f774555ed4f2b04bc8bd243b87d877117617c4623d3",
+        "065a29bcbf59365af5049f774555ed4f2b04bc8bd243b87d877117617c4623d3",
+        "065a29bcbf59365af5049f774555ed4f2b04bc8bd243b87d877117617c4623d3",
+        "065a29bcbf59365af5049f774555ed4f2b04bc8bd243b87d877117617c4623d3",
+        "065a29bcbf59365af5049f774555ed4f2b04bc8bd243b87d877117617c4623d3",
+        "065a29bcbf59365af5049f774555ed4f2b04bc8bd243b87d877117617c4623d3"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_256_4096_256": {
+      "seconds": [
+        0.0035730503838170657,
+        0.003569548949599266,
+        0.0037244651466608047,
+        0.003586152737790888,
+        0.003571410578760234,
+        0.003576263446699489,
+        0.003578070889819752
+      ],
+      "iterations_per_sample": 22,
+      "median_seconds": 0.003576263446699489,
+      "min_seconds": 0.003569548949599266,
+      "max_seconds": 0.0037244651466608047,
+      "relative_mad": 0.0013569660097982822,
+      "output_hashes": [
+        "b56f1db401f37f85710e5af37f786466886b142c81e9086c3fff7daaf615ba95",
+        "b56f1db401f37f85710e5af37f786466886b142c81e9086c3fff7daaf615ba95",
+        "b56f1db401f37f85710e5af37f786466886b142c81e9086c3fff7daaf615ba95",
+        "b56f1db401f37f85710e5af37f786466886b142c81e9086c3fff7daaf615ba95",
+        "b56f1db401f37f85710e5af37f786466886b142c81e9086c3fff7daaf615ba95",
+        "b56f1db401f37f85710e5af37f786466886b142c81e9086c3fff7daaf615ba95",
+        "b56f1db401f37f85710e5af37f786466886b142c81e9086c3fff7daaf615ba95"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_8_8193_8": {
+      "seconds": [
+        4.788702004796901e-05,
+        4.998281163732471e-05,
+        4.764489612360925e-05,
+        4.758828988322043e-05,
+        5.307322027852037e-05,
+        4.9974598712966526e-05,
+        4.7566334826119384e-05
+      ],
+      "iterations_per_sample": 1681,
+      "median_seconds": 4.788702004796901e-05,
+      "min_seconds": 4.7566334826119384e-05,
+      "max_seconds": 5.307322027852037e-05,
+      "relative_mad": 0.006696704483352579,
+      "output_hashes": [
+        "ffd48f60b4d800598c4c0a1b9c1975f1a5df7c68bbf7e42532c2e66a7706eea5",
+        "ffd48f60b4d800598c4c0a1b9c1975f1a5df7c68bbf7e42532c2e66a7706eea5",
+        "ffd48f60b4d800598c4c0a1b9c1975f1a5df7c68bbf7e42532c2e66a7706eea5",
+        "ffd48f60b4d800598c4c0a1b9c1975f1a5df7c68bbf7e42532c2e66a7706eea5",
+        "ffd48f60b4d800598c4c0a1b9c1975f1a5df7c68bbf7e42532c2e66a7706eea5",
+        "ffd48f60b4d800598c4c0a1b9c1975f1a5df7c68bbf7e42532c2e66a7706eea5",
+        "ffd48f60b4d800598c4c0a1b9c1975f1a5df7c68bbf7e42532c2e66a7706eea5"
+      ],
+      "repeat_identical": true
+    },
+    "openblas1024": {
+      "seconds": [
+        0.01356816217303276,
+        0.01358644887804985,
+        0.013520196080207825,
+        0.013583935797214508,
+        0.013648177683353423,
+        0.013686808198690415,
+        0.01350281611084938
+      ],
+      "iterations_per_sample": 5,
+      "median_seconds": 0.013583935797214508,
+      "min_seconds": 0.01350281611084938,
+      "max_seconds": 0.013686808198690415,
+      "relative_mad": 0.004692286385787665,
+      "output_hashes": [
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237"
+      ],
+      "repeat_identical": true
+    },
+    "numpy_exp32": {
+      "seconds": [
+        0.0014796542624632518,
+        0.0014792744898133809,
+        0.0014916107886367375,
+        0.0014909027765194576,
+        0.0014653207251319178,
+        0.0014553374300400417,
+        0.00146874385299506
+      ],
+      "iterations_per_sample": 54,
+      "median_seconds": 0.0014792744898133809,
+      "min_seconds": 0.0014553374300400417,
+      "max_seconds": 0.0014916107886367375,
+      "relative_mad": 0.007860803918509863,
+      "output_hashes": [
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc"
+      ],
+      "repeat_identical": true
+    }
+  }
+}

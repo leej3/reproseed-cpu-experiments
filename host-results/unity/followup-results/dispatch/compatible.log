@@ -1,0 +1,18 @@
+I: REPROSEED=Sourcing .bashrc
+29492 (random) set for  AFNI ANTs PyMVPA FreeSurfer GSL
+I: reproseed.sh - running /home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/torch/bin/python benchmark/dispatch.py
+torch 2.9.1+cpu ATen AVX2
+MKL_VERBOSE oneMKL 2024.0 Update 2 Product build 20240605 for Intel(R) 64 architecture Intel(R) Architecture processors, Lnx 3.62GHz lp64 gnu_thread
+MKL_VERBOSE SGEMM(N,N,1024,1024,1024,0x7fff7dafefa0,0x7bb2fab0b040,1024,0x7bb2faf0c040,1024,0x7fff7dafefc0,0x7bb2fa70a040,1024) 70.79ms CNR:COMPATIBLE Dyn:0 FastMM:1 TID:0  NThr:1
+onednn_verbose,v1,info,oneDNN v3.7.1 (commit 8d263e693366ef8db40acc569cc7d8edf644556d)
+onednn_verbose,v1,info,cpu,runtime:OpenMP,nthr:1
+onednn_verbose,v1,info,cpu,isa:Intel AVX2
+onednn_verbose,v1,info,gpu,runtime:none
+onednn_verbose,v1,info,graph,backend,0:dnnl_backend
+onednn_verbose,v1,primitive,info,template:operation,engine,primitive,implementation,prop_kind,memory_descriptors,attributes,auxiliary,problem_desc,exec_time
+onednn_verbose,v1,graph,info,template:operation,engine,partition_id,partition_kind,op_names,data_formats,logical_tensors,fpmath_mode,implementation,backend,exec_time
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:blk,undef,src:f32::blocked:abcd::f0 dst:f32::blocked:aBcd8b::f0,attr-scratchpad:user,,4x32x64x64,1.15015
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:uni,undef,src:f32::blocked:abcd::f0 dst:f32::blocked:ABcd8b8a::f0,attr-scratchpad:user,,64x32x3x3,0.0390625
+onednn_verbose,v1,primitive,exec,cpu,convolution,jit:avx2,forward_training,src:f32:a:blocked:aBcd8b::f0 wei:f32:a:blocked:ABcd8b8a::f0 bia:undef::undef::: dst:f32:a:blocked:aBcd8b::f0,attr-scratchpad:user,alg:convolution_direct,mb4_ic32oc64_ih64oh64kh3sh1dh0ph1_iw64ow64kw3sw1dw0pw1,7.94507
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:blk,undef,src:f32::blocked:aBcd8b::f0 dst:f32::blocked:abcd::f0,attr-scratchpad:user,,4x64x64x64,2.15918
+MKL_VERBOSE SGEMM(N,N,32768,16,216,0x7fff7dafda50,0x7bb2f8747040,32768,0x5d70a6c138c0,216,0x7fff7dafda70,0x5d70a6d27380,32768) 11.49ms CNR:COMPATIBLE Dyn:0 FastMM:1 TID:0  NThr:1

@@ -1,0 +1,212 @@
+{
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "REPROSEED": "22051",
+    "MKL_DYNAMIC": "FALSE",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "DNNL_MAX_CPU_ISA": "AVX2",
+    "REPROSEED_CPU": "x86-64-v3",
+    "OMP_PROC_BIND": "close",
+    "MKL_CBWR": "AVX2",
+    "ONEDNN_MAX_CPU_ISA": "AVX2",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_INTERFACE_LAYER": "LP64"
+  },
+  "affinity": [
+    0
+  ],
+  "loadavg": [
+    55.40673828125,
+    55.0537109375,
+    56.44775390625
+  ],
+  "numpy": "2.4.2",
+  "mkl_cbwr_raw": 2,
+  "mkl_version": "Intel(R) oneAPI Math Kernel Library Version 2025.2-Product Build 20250620 for Intel(R) 64 architecture applications",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-096271d3.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "mkl",
+      "num_threads": 1,
+      "prefix": "libmkl_rt",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/lib/libmkl_rt.so.2",
+      "version": "2025.2-Product",
+      "threading_layer": "intel"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libiomp",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/lib/libiomp5.so",
+      "version": null
+    }
+  ],
+  "inputs": {
+    "mkl_1024_1024_1024": [
+      "0ebe81f595081c8bd98b1d89a184e3e1332a85a6ccc017e06457de7119592276",
+      "09c46044a79dde25c3368729359ebb97af935d8bc48eca68785f2f285d467fce"
+    ],
+    "mkl_256_4096_256": [
+      "79377cfcb5778f6a04007043ba61d144ce1236a81174eaf975a421060ea1eb71",
+      "8971a312546ce090aea49f22d385f06e7d296c4b912858da0abe1e8a00104cbe"
+    ],
+    "mkl_8_8193_8": [
+      "97e5897b2ea1644be483dd10dead586360593be80908e45391358737d8ffd7ff",
+      "d6527b2c299ccf036b69b216c0a615dd0e33fa0f42f601d826f96785a78da59a"
+    ],
+    "openblas1024": [
+      "406d65d0211355d39b73c81792c524fa8d061bd6c2f22d1f14248f3f62be0531",
+      "ae23a161c90890630b280ccf940d22be6f203aa71968cbcd17dae5467d3c78b8"
+    ],
+    "numpy_exp32": [
+      "7324d952714e772a8abaa7e9645d8f7bf12f60fed48147f82bfc951cffa6bc99"
+    ]
+  },
+  "measurements": {
+    "mkl_1024_1024_1024": {
+      "seconds": [
+        0.044689296977594495,
+        0.04508451698347926,
+        0.045048299012705684,
+        0.045229403069242835,
+        0.04457339609507471,
+        0.045312050031498075,
+        0.044601860106922686
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.045048299012705684,
+      "min_seconds": 0.04457339609507471,
+      "max_seconds": 0.045312050031498075,
+      "relative_mad": 0.005854849674079835,
+      "output_hashes": [
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_256_4096_256": {
+      "seconds": [
+        0.01274167449446395,
+        0.012614402667774508,
+        0.012688200998430451,
+        0.012715925501349071,
+        0.012688640330452472,
+        0.01270935800857842,
+        0.012681311345659196
+      ],
+      "iterations_per_sample": 6,
+      "median_seconds": 0.012688640330452472,
+      "min_seconds": 0.012614402667774508,
+      "max_seconds": 0.01274167449446395,
+      "relative_mad": 0.0016327736925622928,
+      "output_hashes": [
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_8_8193_8": {
+      "seconds": [
+        0.00010730515366151212,
+        0.00010695779415340546,
+        0.00010652293047723286,
+        0.00010668997323504066,
+        0.0001070461443558156,
+        0.00010668074451934765,
+        0.00010684583031691929
+      ],
+      "iterations_per_sample": 748,
+      "median_seconds": 0.00010684583031691929,
+      "min_seconds": 0.00010652293047723286,
+      "max_seconds": 0.00010730515366151212,
+      "relative_mad": 0.0015450841374153041,
+      "output_hashes": [
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2"
+      ],
+      "repeat_identical": true
+    },
+    "openblas1024": {
+      "seconds": [
+        0.042944530956447124,
+        0.04290386300999671,
+        0.04272572498302907,
+        0.04280431498773396,
+        0.04301433404907584,
+        0.04312551498878747,
+        0.04288457694929093
+      ],
+      "iterations_per_sample": 1,
+      "median_seconds": 0.04290386300999671,
+      "min_seconds": 0.04272572498302907,
+      "max_seconds": 0.04312551498878747,
+      "relative_mad": 0.002320257787499394,
+      "output_hashes": [
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237"
+      ],
+      "repeat_identical": true
+    },
+    "numpy_exp32": {
+      "seconds": [
+        0.0011313762149906584,
+        0.0011293320434301026,
+        0.0011286381565566573,
+        0.0011297784579385605,
+        0.001129550885941301,
+        0.0011316630423867276,
+        0.001130926499276289
+      ],
+      "iterations_per_sample": 70,
+      "median_seconds": 0.0011297784579385605,
+      "min_seconds": 0.0011286381565566573,
+      "max_seconds": 0.0011316630423867276,
+      "relative_mad": 0.0010093141481771124,
+      "output_hashes": [
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc"
+      ],
+      "repeat_identical": true
+    }
+  }
+}

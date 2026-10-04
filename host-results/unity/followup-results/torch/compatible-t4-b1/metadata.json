@@ -1,0 +1,179 @@
+{
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "REPROSEED": "2192",
+    "MKL_DYNAMIC": "FALSE",
+    "OPENBLAS_NUM_THREADS": "4",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "DNNL_MAX_CPU_ISA": "AVX2",
+    "REPROSEED_CPU": "x86-64-v3",
+    "OMP_PROC_BIND": "close",
+    "MKL_CBWR": "COMPATIBLE",
+    "ONEDNN_MAX_CPU_ISA": "AVX2",
+    "MKL_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "MKL_INTERFACE_LAYER": "LP64"
+  },
+  "affinity": [
+    0,
+    2,
+    6,
+    8
+  ],
+  "loadavg": [
+    55.958984375,
+    55.46484375,
+    56.34716796875
+  ],
+  "numpy": "2.4.2",
+  "torch_version": "2.9.1+cpu",
+  "torch_build": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 201703\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.7.1 (Git Hash 8d263e693366ef8db40acc569cc7d8edf644556d)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=5811a8d7da873dd699ff6687092c225caffcf1bb, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.9.1, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+  "aten_cpu_capability": "AVX2",
+  "mkldnn_available": true,
+  "mkldnn_enabled": true,
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 4,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/torch/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-096271d3.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 4,
+      "prefix": "libgomp",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/torch/lib/python3.13/site-packages/torch/lib/libgomp.so.1",
+      "version": null
+    }
+  ],
+  "inputs": {
+    "torch_mm1024": [
+      "3107d8b99cfe5d8849cca3d1dcd91b371240fcc1d9ddc4261a05843805aa5288",
+      "85f629fb3d6eb4593a8faf430b1a2f0a4839f3381f704640f2a341a938e9435b"
+    ],
+    "torch_exp32": [
+      "5600c2699758e793e73fab4fbaea509404768475fca0fa185f322173d8cce675"
+    ],
+    "torch_conv2d": [
+      "ee1c7aa5f824e594e59f6c0362daa0e08ca4383b744cb4f372ad86f3171b6792",
+      "9db4800dcaea4b3866760e7ebc8e2260c23d8a7b063785f2081fdf95128207ef"
+    ],
+    "torch_conv3d": [
+      "b777c46621be6726653153df49256d63d6c270bb902386381a7e12adc433d012",
+      "03b91da39cebf31acda6172a2b5139a87c9f7bc9986cd70e0dac05d71aec8e30"
+    ]
+  },
+  "measurements": {
+    "torch_mm1024": {
+      "seconds": [
+        0.017363651015330106,
+        0.017636316770222038,
+        0.017619714984903112,
+        0.017438350507291034,
+        0.017543327499879524,
+        0.01790892699500546,
+        0.017585978494025767
+      ],
+      "iterations_per_sample": 4,
+      "median_seconds": 0.017585978494025767,
+      "min_seconds": 0.017363651015330106,
+      "max_seconds": 0.01790892699500546,
+      "relative_mad": 0.0028624097438406334,
+      "output_hashes": [
+        "5dd1eafdacced4396e4484d9d6db128ea72d5d9faa9a6030fce250299e3e0a33",
+        "5dd1eafdacced4396e4484d9d6db128ea72d5d9faa9a6030fce250299e3e0a33",
+        "5dd1eafdacced4396e4484d9d6db128ea72d5d9faa9a6030fce250299e3e0a33",
+        "5dd1eafdacced4396e4484d9d6db128ea72d5d9faa9a6030fce250299e3e0a33",
+        "5dd1eafdacced4396e4484d9d6db128ea72d5d9faa9a6030fce250299e3e0a33",
+        "5dd1eafdacced4396e4484d9d6db128ea72d5d9faa9a6030fce250299e3e0a33",
+        "5dd1eafdacced4396e4484d9d6db128ea72d5d9faa9a6030fce250299e3e0a33"
+      ],
+      "repeat_identical": true
+    },
+    "torch_exp32": {
+      "seconds": [
+        0.00023176023554613535,
+        0.00023417752878419283,
+        0.0002532109655653951,
+        0.00023213658319925354,
+        0.00023221039921098827,
+        0.00023158907458111215,
+        0.00023340920104120654
+      ],
+      "iterations_per_sample": 348,
+      "median_seconds": 0.00023221039921098827,
+      "min_seconds": 0.00023158907458111215,
+      "max_seconds": 0.0002532109655653951,
+      "relative_mad": 0.0026756968335064704,
+      "output_hashes": [
+        "48313dba5955ac03573e68b23c2aa950f8dfd91f4b9edd959e2b5b92f30c1330",
+        "48313dba5955ac03573e68b23c2aa950f8dfd91f4b9edd959e2b5b92f30c1330",
+        "48313dba5955ac03573e68b23c2aa950f8dfd91f4b9edd959e2b5b92f30c1330",
+        "48313dba5955ac03573e68b23c2aa950f8dfd91f4b9edd959e2b5b92f30c1330",
+        "48313dba5955ac03573e68b23c2aa950f8dfd91f4b9edd959e2b5b92f30c1330",
+        "48313dba5955ac03573e68b23c2aa950f8dfd91f4b9edd959e2b5b92f30c1330",
+        "48313dba5955ac03573e68b23c2aa950f8dfd91f4b9edd959e2b5b92f30c1330"
+      ],
+      "repeat_identical": true
+    },
+    "torch_conv2d": {
+      "seconds": [
+        0.0017948984521243608,
+        0.0018895379705072353,
+        0.001796251938988765,
+        0.0017121906963769686,
+        0.0017381743034065673,
+        0.001775920849688577,
+        0.0016757229089059613
+      ],
+      "iterations_per_sample": 33,
+      "median_seconds": 0.001775920849688577,
+      "min_seconds": 0.0016757229089059613,
+      "max_seconds": 0.0018895379705072353,
+      "relative_mad": 0.02125463321669363,
+      "output_hashes": [
+        "0717c99b547beb460de6cd89b1d722c75d663cc98c19f25b9932fcddc93ed6a8",
+        "0717c99b547beb460de6cd89b1d722c75d663cc98c19f25b9932fcddc93ed6a8",
+        "0717c99b547beb460de6cd89b1d722c75d663cc98c19f25b9932fcddc93ed6a8",
+        "0717c99b547beb460de6cd89b1d722c75d663cc98c19f25b9932fcddc93ed6a8",
+        "0717c99b547beb460de6cd89b1d722c75d663cc98c19f25b9932fcddc93ed6a8",
+        "0717c99b547beb460de6cd89b1d722c75d663cc98c19f25b9932fcddc93ed6a8",
+        "0717c99b547beb460de6cd89b1d722c75d663cc98c19f25b9932fcddc93ed6a8"
+      ],
+      "repeat_identical": true
+    },
+    "torch_conv3d": {
+      "seconds": [
+        0.00815047714083145,
+        0.005528754733192424,
+        0.004931907332502305,
+        0.004977012394617001,
+        0.004879746267882486,
+        0.004879564535804093,
+        0.00490593200083822
+      ],
+      "iterations_per_sample": 15,
+      "median_seconds": 0.004931907332502305,
+      "min_seconds": 0.004879564535804093,
+      "max_seconds": 0.00815047714083145,
+      "relative_mad": 0.010576245882818375,
+      "output_hashes": [
+        "b6e43ce34282b1b73f2aa8773d97c8533ae9ba68b25bbd28494f12e1a61b475f",
+        "b6e43ce34282b1b73f2aa8773d97c8533ae9ba68b25bbd28494f12e1a61b475f",
+        "b6e43ce34282b1b73f2aa8773d97c8533ae9ba68b25bbd28494f12e1a61b475f",
+        "b6e43ce34282b1b73f2aa8773d97c8533ae9ba68b25bbd28494f12e1a61b475f",
+        "b6e43ce34282b1b73f2aa8773d97c8533ae9ba68b25bbd28494f12e1a61b475f",
+        "b6e43ce34282b1b73f2aa8773d97c8533ae9ba68b25bbd28494f12e1a61b475f",
+        "b6e43ce34282b1b73f2aa8773d97c8533ae9ba68b25bbd28494f12e1a61b475f"
+      ],
+      "repeat_identical": true
+    }
+  }
+}

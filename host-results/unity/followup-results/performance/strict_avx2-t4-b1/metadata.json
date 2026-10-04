@@ -1,0 +1,215 @@
+{
+  "environment": {
+    "OPENBLAS_CORETYPE": "Haswell",
+    "ATEN_CPU_CAPABILITY": "avx2",
+    "REPROSEED": "4790",
+    "MKL_DYNAMIC": "FALSE",
+    "OPENBLAS_NUM_THREADS": "4",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_PLACES": "cores",
+    "DNNL_MAX_CPU_ISA": "AVX2",
+    "REPROSEED_CPU": "x86-64-v3",
+    "OMP_PROC_BIND": "close",
+    "MKL_CBWR": "AVX2,STRICT",
+    "ONEDNN_MAX_CPU_ISA": "AVX2",
+    "MKL_NUM_THREADS": "4",
+    "OMP_NUM_THREADS": "4",
+    "MKL_INTERFACE_LAYER": "LP64"
+  },
+  "affinity": [
+    0,
+    2,
+    6,
+    8
+  ],
+  "loadavg": [
+    55.73486328125,
+    55.1484375,
+    56.44970703125
+  ],
+  "numpy": "2.4.2",
+  "mkl_cbwr_raw": 65538,
+  "mkl_version": "Intel(R) oneAPI Math Kernel Library Version 2025.2-Product Build 20250620 for Intel(R) 64 architecture applications",
+  "threadpools": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 4,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/lib/python3.13/site-packages/numpy.libs/libscipy_openblas64_-096271d3.so",
+      "version": "0.3.31.dev",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "mkl",
+      "num_threads": 4,
+      "prefix": "libmkl_rt",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/lib/libmkl_rt.so.2",
+      "version": "2025.2-Product",
+      "threading_layer": "intel"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 4,
+      "prefix": "libiomp",
+      "filepath": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004/.pixi/envs/default/lib/libiomp5.so",
+      "version": null
+    }
+  ],
+  "inputs": {
+    "mkl_1024_1024_1024": [
+      "0ebe81f595081c8bd98b1d89a184e3e1332a85a6ccc017e06457de7119592276",
+      "09c46044a79dde25c3368729359ebb97af935d8bc48eca68785f2f285d467fce"
+    ],
+    "mkl_256_4096_256": [
+      "79377cfcb5778f6a04007043ba61d144ce1236a81174eaf975a421060ea1eb71",
+      "8971a312546ce090aea49f22d385f06e7d296c4b912858da0abe1e8a00104cbe"
+    ],
+    "mkl_8_8193_8": [
+      "97e5897b2ea1644be483dd10dead586360593be80908e45391358737d8ffd7ff",
+      "d6527b2c299ccf036b69b216c0a615dd0e33fa0f42f601d826f96785a78da59a"
+    ],
+    "openblas1024": [
+      "406d65d0211355d39b73c81792c524fa8d061bd6c2f22d1f14248f3f62be0531",
+      "ae23a161c90890630b280ccf940d22be6f203aa71968cbcd17dae5467d3c78b8"
+    ],
+    "numpy_exp32": [
+      "7324d952714e772a8abaa7e9645d8f7bf12f60fed48147f82bfc951cffa6bc99"
+    ]
+  },
+  "measurements": {
+    "mkl_1024_1024_1024": {
+      "seconds": [
+        0.012040481999671707,
+        0.012108337657991797,
+        0.012085013324394822,
+        0.012133268348407,
+        0.01205959334038198,
+        0.012160314829088748,
+        0.012094252665216723
+      ],
+      "iterations_per_sample": 6,
+      "median_seconds": 0.012094252665216723,
+      "min_seconds": 0.012040481999671707,
+      "max_seconds": 0.012160314829088748,
+      "relative_mad": 0.0028657682119065005,
+      "output_hashes": [
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf",
+        "b07d7721f19c44fb5b06938acab559cbcb3f480e581d49f8dae1340c60d191cf"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_256_4096_256": {
+      "seconds": [
+        0.0035100017716600137,
+        0.003824025318449871,
+        0.0035622073602016,
+        0.0034673553150655193,
+        0.0034754347712309523,
+        0.0034958449118262665,
+        0.003489408589137549
+      ],
+      "iterations_per_sample": 22,
+      "median_seconds": 0.0034958449118262665,
+      "min_seconds": 0.0034673553150655193,
+      "max_seconds": 0.003824025318449871,
+      "relative_mad": 0.00583839990334462,
+      "output_hashes": [
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571",
+        "d50e0733623472adef42ee985eaf6a3adc319f2a68ec08353ef2e798d62c3571"
+      ],
+      "repeat_identical": true
+    },
+    "mkl_8_8193_8": {
+      "seconds": [
+        3.627940805371604e-05,
+        3.661504090067854e-05,
+        3.667040901296638e-05,
+        3.6608593892632235e-05,
+        3.687507785034116e-05,
+        3.6809033048810283e-05,
+        3.664125342978389e-05
+      ],
+      "iterations_per_sample": 2056,
+      "median_seconds": 3.664125342978389e-05,
+      "min_seconds": 3.627940805371604e-05,
+      "max_seconds": 3.687507785034116e-05,
+      "relative_mad": 0.0008913324216443672,
+      "output_hashes": [
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2",
+        "5d0761f2a3da6bfbb07847a66ff2da0c4e746a908f1af9a0611d3f29c220b4e2"
+      ],
+      "repeat_identical": true
+    },
+    "openblas1024": {
+      "seconds": [
+        0.029992660507559776,
+        0.02723994496045634,
+        0.028757322987075895,
+        0.0272281524958089,
+        0.027186784020159394,
+        0.027242294512689114,
+        0.027238993032369763
+      ],
+      "iterations_per_sample": 2,
+      "median_seconds": 0.02723994496045634,
+      "min_seconds": 0.027186784020159394,
+      "max_seconds": 0.029992660507559776,
+      "relative_mad": 0.00043291073695490124,
+      "output_hashes": [
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237",
+        "0ac75568db2528fb94a0f058f3b38deb0a33ac80fa016065c325e0016a689237"
+      ],
+      "repeat_identical": true
+    },
+    "numpy_exp32": {
+      "seconds": [
+        0.0011289922570410585,
+        0.0011309808984931026,
+        0.0011286033716584956,
+        0.0011279054717825991,
+        0.0011285927845165133,
+        0.0011282422579824924,
+        0.0011284828585173402
+      ],
+      "iterations_per_sample": 70,
+      "median_seconds": 0.0011285927845165133,
+      "min_seconds": 0.0011279054717825991,
+      "max_seconds": 0.0011309808984931026,
+      "relative_mad": 0.00031058725417163244,
+      "output_hashes": [
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc",
+        "f71f5059f4a9eab1a66b91e0eb416f96d3fb567efafc3443f5101dad446964bc"
+      ],
+      "repeat_identical": true
+    }
+  }
+}

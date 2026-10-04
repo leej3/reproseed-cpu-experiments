@@ -1,0 +1,68 @@
+{
+  "scope": "Local investigation only; no public changes or publication authorized.",
+  "original_pr9": "5f8229787001a946e4e020b68805661272577428",
+  "original_pr11": "51d4c3578fe3bb43aeae87a29c5768a2cc53c4fd",
+  "candidate": "benchmark/compatible-default.sh changes only MKL default AVX2 -> COMPATIBLE from the PR 11 shell script; explicit overrides retained.",
+  "dataset_paths": {
+    "typhon": "/home/leej3/reproseed-followup-20261004",
+    "smaug": "/home/leej3/reproseed-followup-20261004",
+    "unity": "/home/f008q9c_dartmouth_edu/reproseed-followup-20261004"
+  },
+  "runs": {
+    "typhon": {
+      "performance": "93673687d350e47e0469a9cb3f34909b26d68192",
+      "torch": "cdbe0ad921eb7acb4600726c60eb07e619eae459",
+      "dispatch": "f61bd23a2866a4fea3ebdb4c4969918531b310ab",
+      "existing_data_analysis": "4aa1a37c718ddf9e5272cb45b030e4484a3953be",
+      "proposed_tests": "0aa385a0818fe9c744ca8b0303ab00347ecc7998"
+    },
+    "smaug": {
+      "performance": "ed8b9a02b7bbef3c03c3de106f210534f36c2e50",
+      "torch": "b232b3f54741bec019fe5be8bfaa4dce8ab61993",
+      "dispatch": "cdaa104ccfaebcaef2c1c3c1337cae0d8d63bffc"
+    },
+    "unity": {
+      "performance": "1d1de5039132ef2f1f681fede9513b087676d9e7",
+      "torch": "e696a14a426abf41b7a4c7f4bdc6ad39227a2ff4",
+      "slurm_job": 65228989,
+      "state": "COMPLETED",
+      "exit_code": "0:0",
+      "node": "cpu033",
+      "cpu": "AMD EPYC 7543",
+      "dispatch": "4bf63a70664d0780188fbbb7423429e9688be293",
+      "dispatch_job": 65229360
+    }
+  },
+  "method": {
+    "threads": [
+      1,
+      4
+    ],
+    "process_blocks": 3,
+    "samples_per_process": 7,
+    "warmup_calls": 3,
+    "timed_batch_target_seconds": 0.08,
+    "seed": 20261004,
+    "timing": "perf_counter around warmed compute calls, excluding interpreter/import/input generation; operator output allocation retained for PyTorch",
+    "pinning": "distinct physical cores chosen within existing allowed CPU affinity; no system settings changed",
+    "controls": [
+      "MKL_DYNAMIC=FALSE",
+      "OMP_DYNAMIC=FALSE",
+      "OMP_PROC_BIND=close",
+      "OMP_PLACES=cores",
+      "explicit MKL/OMP/OPENBLAS thread counts"
+    ],
+    "order": "randomized case/thread order per block using recorded deterministic seed",
+    "repeat_check": "hash final output of each timed batch, 21 output samples per host/case/thread/workload",
+    "valid_outputs": "Use each host commands.json to select actually executed cases; inherited AVX512 snapshots on non-AVX512 hosts are excluded."
+  },
+  "limits": [
+    "Native elapsed compute timings are rough workload-specific measurements; shared host load and output allocation contribute noise.",
+    "3-D convolution and some four-thread OpenBLAS/skinny results have substantial process-to-process spread; small differences are inconclusive.",
+    "Existing v2 Unity results used cpu053/EPYC 7763; new measurements use cpu033/EPYC 7543.",
+    "PyTorch 2.9.1+cpu includes MKL 2024.2 and oneDNN 3.7.1; separate ctypes MKL probes use 2025.2.0.",
+    "No emulated performance results.",
+    "No GPU, backward/training or mixed-precision numerical coverage in this bounded study."
+  ],
+  "logs": "Private per-host ~/.local/state/con-duct/reproseed-followup-20261004; no skill-log uploads under investigation-only scope."
+}

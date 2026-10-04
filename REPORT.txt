@@ -1,0 +1,132 @@
+LOCAL INVESTIGATION — NOT PUBLISHED
+
+Recommendation
+Use COMPATIBLE as the MKL default if reproseed's default profile is intended for
+bitwise agreement across Intel and AMD at fixed thread counts. That is the
+reproducibility goal used for this recommendation. Retain explicit AVX2 and
+AVX2,STRICT choices for Intel-only workloads where throughput or thread-count
+independence matters. The proposed patch changes only the default, its existing
+test expectations/override coverage, and the directly affected documentation.
+It has not been applied to PR 11 or pushed.
+
+This is a substantial performance tradeoff, not an unqualified improvement.
+Retaining AVX2 is defensible as an Intel-oriented performance profile, but the
+observed AMD fallback and output differences do not support treating it as the
+mixed-vendor reproducible default. AVX2,STRICT solves a different problem: selected
+Intel MKL operations across thread counts. COMPATIBLE does not solve that problem.
+Earlier deferral of these checks was a scope decision, not a hardware blocker.
+
+Consistency
+The existing v2 hashes were compared for all 36 pairs of the nine host/thread
+combinations (Typhon, Smaug, Unity cpu053; 1/2/4 threads), with input hashes checked.
+For COMPATIBLE, all 10 arrays match across hosts at each fixed thread count. Across
+thread counts, the 8x8193 by 8193x8 MKL GEMM and OpenBLAS GEMM differ. AVX2,STRICT
+keeps the four Intel MKL GEMMs identical across threads, but does not make their
+Intel and AMD outputs agree. These observations agree with Intel's documented
+fixed-thread standard CNR and restricted strict-CNR conditions.
+
+New native runs: Typhon (Xeon Silver 4309Y), Smaug (Xeon E5-2623 v3), and Unity
+cpu033 (EPYC 7543; different node/model from v2's cpu053/EPYC 7763).
+At each fixed thread count (1 or 4), COMPATIBLE yields identical raw output hashes
+across all three hosts for the 5 NumPy/OpenBLAS/MKL and 4 PyTorch workloads.
+With PR 9's AVX2 profile, the 3 MKL DGEMMs and PyTorch exp/conv3d differ between
+Intel and AMD; PyTorch matmul and conv2d match in this workload. Explicit AVX2
+under the proposed default reproduces PR 9's numerical results. Across 1 vs 4
+threads, COMPATIBLE still differs for the skinny MKL GEMM; all 4 tested PyTorch
+outputs match. There were no differing hashes among the 21 observed output
+samples for any host/configuration/thread/workload (6,048 samples total).
+
+Native performance
+Cells give COMPATIBLE time / PR 9 AVX2-profile time, at 1 / 4 threads:
+                              DGEMM 1024^3   DGEMM 256x4096x256   torch.mm 1024^3
+Typhon                        4.42 / 4.44    4.38 / 4.73          3.85 / 3.73
+Smaug                         4.60 / 4.35    4.30 / 4.39          3.79 / 3.40
+Unity cpu033                  4.37 / 4.19    3.89 / 3.89          3.32 / 3.08
+
+Against native (no CPU-profile caps; same fixed-thread controls), COMPATIBLE's
+larger DGEMMs take 4.88–8.19x on Typhon, 4.33–4.59x on Smaug, and 3.33–4.36x on
+Unity. PR 9 already costs throughput versus native AVX512 on Typhon. Explicit
+AVX2,STRICT is approximately 0.97–1.12x PR 9 on the two larger Intel DGEMMs; its
+cost is higher on the skinny case. AVX512,STRICT on Typhon is substantially faster
+than AVX2 for the larger DGEMMs but is not a common branch with Smaug or these AMDs.
+
+COMPATIBLE's PyTorch exp takes 1.72–2.57x PR 9 on Intel and approximately 1.00x on
+AMD. PyTorch conv2d remains approximately 0.95–1.02x PR 9 on the three hosts. The
+conv3d timings and several short/four-thread BLAS cases are noisy; do not infer a
+small improvement or universal slowdown. Full per-workload absolute medians,
+ratios to both PR 9 and native, and noise measurements are in followup-summary.json.
+
+Method and limits
+192 fresh process runs: 3 process blocks, 7 timed batches each, at 1 and 4 threads;
+3 warm-up calls and one calibration call precede timing. Each batch targets ~80ms
+of compute. Inputs use a fixed PCG64 seed. Timers exclude imports, startup, and
+input generation; PyTorch operator output allocation remains part of its calls.
+Distinct physical CPU cores are selected within the allowed affinity. Configuration
+order is deterministically shuffled per block. MKL_DYNAMIC/OMP_DYNAMIC are FALSE;
+thread counts and OMP binding are explicit. Shared Intel hosts were not reserved
+exclusively. Unity was a scheduled four-core CPU allocation, job 65228989,
+COMPLETED 0:0. No emulated performance measurements were used.
+
+Large COMPATIBLE DGEMM process-median spreads were about 0.1–2.0%; some comparator
+or small/four-thread workloads had appreciably larger noise. For example, one
+OpenBLAS configuration spans ~58% across process medians. These are rough operator
+measurements, not end-to-end STAMPED workflow timings. Numerical differences are
+bitwise differences, not evidence that one result is mathematically more accurate.
+
+Backend coverage
+Pinned standalone MKL 2025.2.0, NumPy 2.4.2/OpenBLAS, and CPU-only PyTorch 2.9.1
+(bundled MKL 2024.2, oneDNN 3.7.1). Workloads: three FP64 MKL GEMM shapes, FP64
+OpenBLAS 1024-square GEMM, FP32 NumPy exp, FP32 PyTorch 1024-square matmul/exp,
+2-D convolution (4x32x64x64, 64x32x3x3 weights), and 3-D convolution
+(1x8x32x32x32, 16x8x3x3x3 weights).
+
+Untimed diagnostics on each host verify backend use. The tested 2-D convolution
+uses oneDNN; Typhon native uses jit:avx512_core and both controlled profiles use
+jit:avx2. The tested 3-D convolution uses MKL SGEMM, not oneDNN. PyTorch's MKL
+reports CNR:AVX2 on Intel and CNR:AUTO on AMD for PR 9; COMPATIBLE reports
+CNR:COMPATIBLE. The source maps FP32 exp to MKL VML in this build. There is no GPU,
+backward/training, or mixed-precision coverage in this bounded study.
+
+Provenance and reproduction
+All new work is isolated under ~/reproseed-followup-20261004 on each host. No
+publication remotes were retained in those new clones. Existing PR checkouts and
+public posts are unchanged. Pinned pixi.toml/pixi.lock, declared DataLad inputs and
+outputs, numerical hashes, first-block raw arrays, and repeated timings are saved
+locally. Native and PyTorch runs were actually reproduced with datalad rerun on
+Smaug and Unity. Immutable run/rerun IDs and host paths: followup-provenance.json.
+
+From the isolated dataset, using its project-local Pixi launcher:
+  pixi run --locked performance
+  pixi run -e torch --locked torch-performance
+  pixi run --locked reproduce-performance
+  pixi run -e torch --locked reproduce-torch
+  pixi run --locked compare-followup
+The first two tasks execute datalad run with explicit benchmark/lock inputs and
+result outputs. Reproduce tasks execute datalad rerun of Typhon's original runs.
+Provision the pinned environment before rerunning. Runtime logs/timings will vary;
+compare raw array hashes for numerical reproduction.
+
+A rerun on a host without AVX512 can retain inherited Typhon-only result files;
+analyze_followup.py explicitly uses that host's commands.json to exclude all
+configurations not actually executed there. No inherited AVX512 result is counted
+as a Smaug or Unity measurement. Private duct logs remain on each host under
+~/.local/state/con-duct/reproseed-followup-20261004. No log upload was performed.
+
+Patch validation
+compatible-default.patch is relative to PR 11 commit 51d4c3578fe3bb43aeae87a29c5768a2cc53c4fd.
+Its shell script is byte-identical to the benchmarked compatible-default.sh.
+ShellCheck and all 21 Bats tests pass on Typhon; explicit AVX2 and AVX2,STRICT
+preservation is included. A failed directory-level Bats discovery attempt was
+retained locally; the final command names tests/test_basic.sh explicitly.
+Only docs/cpu-features.md's MKL default/conditions change; README is untouched.
+
+Primary references
+Intel 2025.2 branch semantics (COMPATIBLE SSE2, Intel-only optimized branches,
+unsupported request fallback, STRICT support):
+https://www.intel.com/content/www/us/en/docs/onemkl/developer-guide-linux/2025-2/specifying-code-branches.html
+Intel CNR fixed-thread/dynamic-control and strict-routine conditions:
+https://www.intel.com/content/www/us/en/docs/onemkl/developer-guide-linux/2025-2/reproducibility-conditions.html
+oneDNN build/runtime dispatch controls:
+https://uxlfoundation.github.io/oneDNN/dev_guide_cpu_dispatcher_control.html
+PyTorch v2.9.1 MKL VML exp mapping:
+https://github.com/pytorch/pytorch/blob/v2.9.1/aten/src/ATen/cpu/vml.h#L96-L134
