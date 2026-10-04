@@ -1,0 +1,15 @@
+torch 2.9.1+cpu ATen AVX512
+MKL_VERBOSE oneMKL 2024.0 Update 2 Product build 20240605 for Intel(R) 64 architecture Intel(R) Advanced Vector Extensions 512 (Intel(R) AVX-512) with support of Intel(R) Deep Learning Boost (Intel(R) DL Boost), EVEX-encoded AES and Carry-Less Multiplication Quadword instructions, Lnx 2.80GHz lp64 gnu_thread
+MKL_VERBOSE SGEMM(N,N,1024,1024,1024,0x7ffed2ce5810,0x7f89e0828040,1024,0x7f89e0c29040,1024,0x7ffed2ce5830,0x7f89e0427040,1024) 13.52ms CNR:OFF Dyn:0 FastMM:1 TID:0  NThr:1
+onednn_verbose,v1,info,oneDNN v3.7.1 (commit 8d263e693366ef8db40acc569cc7d8edf644556d)
+onednn_verbose,v1,info,cpu,runtime:OpenMP,nthr:1
+onednn_verbose,v1,info,cpu,isa:Intel AVX-512 with Intel DL Boost
+onednn_verbose,v1,info,gpu,runtime:none
+onednn_verbose,v1,info,graph,backend,0:dnnl_backend
+onednn_verbose,v1,primitive,info,template:operation,engine,primitive,implementation,prop_kind,memory_descriptors,attributes,auxiliary,problem_desc,exec_time
+onednn_verbose,v1,graph,info,template:operation,engine,partition_id,partition_kind,op_names,data_formats,logical_tensors,fpmath_mode,implementation,backend,exec_time
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:blk,undef,src:f32::blocked:abcd::f0 dst:f32::blocked:aBcd16b::f0,attr-scratchpad:user,,4x32x64x64,0.801025
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:uni,undef,src:f32::blocked:abcd::f0 dst:f32::blocked:ABcd16b16a::f0,attr-scratchpad:user,,64x32x3x3,0.0339355
+onednn_verbose,v1,primitive,exec,cpu,convolution,jit:avx512_core,forward_training,src:f32:a:blocked:aBcd16b::f0 wei:f32:a:blocked:ABcd16b16a::f0 bia:undef::undef::: dst:f32:a:blocked:aBcd16b::f0,attr-scratchpad:user,alg:convolution_direct,mb4_ic32oc64_ih64oh64kh3sh1dh0ph1_iw64ow64kw3sw1dw0pw1,4.7019
+onednn_verbose,v1,primitive,exec,cpu,reorder,jit:blk,undef,src:f32::blocked:aBcd16b::f0 dst:f32::blocked:abcd::f0,attr-scratchpad:user,,4x64x64x64,1.42822
+MKL_VERBOSE SGEMM(N,N,32768,16,216,0x7ffed2ce42c0,0x7f89de307040,32768,0x56133fe1e9c0,216,0x7ffed2ce42e0,0x56133ff32b80,32768) 8.95ms CNR:OFF Dyn:0 FastMM:1 TID:0  NThr:1
