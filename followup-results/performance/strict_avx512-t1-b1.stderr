@@ -1,0 +1,3 @@
+I: REPROSEED=4531 (random) set for  AFNI ANTs PyMVPA FreeSurfer GSL
+W: preserving MKL_CBWR=AVX512,STRICT; this setting is not verified against the AVX2 profile and results may differ across CPUs
+I: reproseed.sh - running /home/leej3/reproseed-followup-20261004/.pixi/envs/default/bin/python /home/leej3/reproseed-followup-20261004/benchmark/performance.py /home/leej3/reproseed-followup-20261004/followup-results/performance/strict_avx512-t1-b1

@@ -1,0 +1,1 @@
+{"out": "/home/leej3/reproseed-followup-20261004/followup-results/performance/compatible-t1-b2", "medians": {"mkl_1024_1024_1024": 0.2035331055521965, "mkl_256_4096_256": 0.05208712816238403, "mkl_8_8193_8": 0.0001827605761760889, "openblas1024": 0.044253502041101456, "numpy_exp32": 0.0009233710271391002}}

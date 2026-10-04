@@ -1,0 +1,1 @@
+{"out": "/home/leej3/reproseed-followup-20261004/followup-results/performance/strict_avx2-t1-b1", "medians": {"mkl_1024_1024_1024": 0.04464029148221016, "mkl_256_4096_256": 0.01179066983362039, "mkl_8_8193_8": 5.255866331352163e-05, "openblas1024": 0.04385595768690109, "numpy_exp32": 0.0009082421152429147}}
