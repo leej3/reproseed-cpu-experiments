@@ -1,0 +1,1 @@
+ERROR: Found no tests. (Try `--allow-empty-suite`?)1..0
