@@ -1,0 +1,22 @@
+1..21
+ok 1 source basic functionality test
+ok 2 source check output
+ok 3 seed and source
+ok 4 execute
+ok 5 seed execute
+ok 6 no output to stdout
+ok 7 cpu features restricted by default on x86_64
+ok 8 cpu features values
+ok 9 cpu features not forced if CPU support is not confirmed
+ok 10 cpu features not restricted if native
+ok 11 cpu features not restricted by default on non-x86_64
+ok 12 x86-64-v3 on non-x86_64 warns
+ok 13 unknown cpu level warns
+ok 14 NumPy is not restricted without AVX512
+ok 15 NumPy is not restricted if NPY_ENABLE_CPU_FEATURES is set
+ok 16 MKL setting outside the profile is preserved with a warning
+ok 17 source under set -eu
+ok 18 cpu warnings go to stderr only
+ok 19 explicit compatible MKL settings are preserved without warning
+ok 20 NumPy exclusions are merged and repeated sourcing is idempotent
+ok 21 native preserves explicit CPU settings
