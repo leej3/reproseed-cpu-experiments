@@ -1,0 +1,97 @@
+
+HOST typhon
+1 mkl_1024_1024_1024 4.42x PR9 8.19x native spread 1.6%
+1 mkl_256_4096_256 4.38x PR9 7.25x native spread 0.8%
+1 mkl_8_8193_8 4.83x PR9 4.30x native spread 1.9%
+1 openblas1024 1.01x PR9 1.67x native spread 0.2%
+1 numpy_exp32 0.99x PR9 2.12x native spread 0.3%
+1 torch_mm1024 3.85x PR9 6.89x native spread 0.5%
+1 torch_exp32 2.57x PR9 2.74x native spread 1.4%
+1 torch_conv2d 0.97x PR9 1.60x native spread 2.1%
+1 torch_conv3d 0.87x PR9 1.17x native spread 15.0%
+4 mkl_1024_1024_1024 4.44x PR9 7.64x native spread 0.1%
+4 mkl_256_4096_256 4.73x PR9 4.88x native spread 0.8%
+4 mkl_8_8193_8 3.34x PR9 3.86x native spread 40.3%
+4 openblas1024 0.99x PR9 1.54x native spread 23.1%
+4 numpy_exp32 0.97x PR9 2.07x native spread 6.3%
+4 torch_mm1024 3.73x PR9 6.45x native spread 1.7%
+4 torch_exp32 2.29x PR9 2.52x native spread 3.1%
+4 torch_conv2d 0.95x PR9 1.43x native spread 9.4%
+4 torch_conv3d 1.00x PR9 1.41x native spread 20.8%
+
+HOST smaug
+1 mkl_1024_1024_1024 4.60x PR9 4.59x native spread 1.5%
+1 mkl_256_4096_256 4.30x PR9 4.35x native spread 0.4%
+1 mkl_8_8193_8 4.93x PR9 5.10x native spread 0.7%
+1 openblas1024 1.03x PR9 1.00x native spread 4.1%
+1 numpy_exp32 1.01x PR9 0.97x native spread 8.7%
+1 torch_mm1024 3.79x PR9 3.79x native spread 2.6%
+1 torch_exp32 2.13x PR9 2.18x native spread 1.5%
+1 torch_conv2d 1.00x PR9 1.01x native spread 2.1%
+1 torch_conv3d 1.04x PR9 1.05x native spread 15.1%
+4 mkl_1024_1024_1024 4.35x PR9 4.33x native spread 0.1%
+4 mkl_256_4096_256 4.39x PR9 4.49x native spread 0.2%
+4 mkl_8_8193_8 1.92x PR9 1.83x native spread 13.7%
+4 openblas1024 1.04x PR9 1.04x native spread 58.4%
+4 numpy_exp32 1.05x PR9 1.04x native spread 14.5%
+4 torch_mm1024 3.40x PR9 3.41x native spread 0.8%
+4 torch_exp32 1.72x PR9 1.72x native spread 1.8%
+4 torch_conv2d 0.99x PR9 0.97x native spread 0.9%
+4 torch_conv3d 1.11x PR9 1.03x native spread 43.3%
+
+HOST unity
+1 mkl_1024_1024_1024 4.37x PR9 4.36x native spread 0.6%
+1 mkl_256_4096_256 3.89x PR9 3.89x native spread 0.7%
+1 mkl_8_8193_8 1.59x PR9 1.64x native spread 0.8%
+1 openblas1024 0.99x PR9 1.00x native spread 2.3%
+1 numpy_exp32 1.00x PR9 1.00x native spread 3.5%
+1 torch_mm1024 3.32x PR9 3.30x native spread 0.1%
+1 torch_exp32 1.00x PR9 1.00x native spread 0.7%
+1 torch_conv2d 1.01x PR9 1.01x native spread 1.2%
+1 torch_conv3d 1.50x PR9 1.03x native spread 19.2%
+4 mkl_1024_1024_1024 4.19x PR9 3.63x native spread 0.4%
+4 mkl_256_4096_256 3.89x PR9 3.33x native spread 2.0%
+4 mkl_8_8193_8 1.01x PR9 0.35x native spread 3.9%
+4 openblas1024 1.01x PR9 0.87x native spread 48.2%
+4 numpy_exp32 1.01x PR9 1.00x native spread 3.2%
+4 torch_mm1024 3.08x PR9 2.43x native spread 1.0%
+4 torch_exp32 1.00x PR9 1.00x native spread 1.1%
+4 torch_conv2d 1.02x PR9 1.04x native spread 3.2%
+4 torch_conv3d 1.16x PR9 1.64x native spread 42.8%
+Nonrepeatable: []
+{'mode': 'performance', 'case': 'pr9', 'a': ['typhon', 4], 'b': ['smaug', 4], 'different': []}
+{'mode': 'performance', 'case': 'pr9', 'a': ['typhon', 4], 'b': ['unity', 4], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'performance', 'case': 'pr9', 'a': ['typhon', 1], 'b': ['smaug', 1], 'different': []}
+{'mode': 'performance', 'case': 'pr9', 'a': ['typhon', 1], 'b': ['unity', 1], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'performance', 'case': 'pr9', 'a': ['smaug', 4], 'b': ['unity', 4], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'performance', 'case': 'pr9', 'a': ['smaug', 1], 'b': ['unity', 1], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'performance', 'case': 'compatible', 'a': ['typhon', 4], 'b': ['smaug', 4], 'different': []}
+{'mode': 'performance', 'case': 'compatible', 'a': ['typhon', 4], 'b': ['unity', 4], 'different': []}
+{'mode': 'performance', 'case': 'compatible', 'a': ['typhon', 1], 'b': ['smaug', 1], 'different': []}
+{'mode': 'performance', 'case': 'compatible', 'a': ['typhon', 1], 'b': ['unity', 1], 'different': []}
+{'mode': 'performance', 'case': 'compatible', 'a': ['smaug', 4], 'b': ['unity', 4], 'different': []}
+{'mode': 'performance', 'case': 'compatible', 'a': ['smaug', 1], 'b': ['unity', 1], 'different': []}
+{'mode': 'performance', 'case': 'strict_avx2', 'a': ['typhon', 1], 'b': ['smaug', 1], 'different': []}
+{'mode': 'performance', 'case': 'strict_avx2', 'a': ['typhon', 1], 'b': ['unity', 1], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'performance', 'case': 'strict_avx2', 'a': ['typhon', 4], 'b': ['smaug', 4], 'different': []}
+{'mode': 'performance', 'case': 'strict_avx2', 'a': ['typhon', 4], 'b': ['unity', 4], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'performance', 'case': 'strict_avx2', 'a': ['smaug', 1], 'b': ['unity', 1], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'performance', 'case': 'strict_avx2', 'a': ['smaug', 4], 'b': ['unity', 4], 'different': ['mkl_1024_1024_1024', 'mkl_256_4096_256', 'mkl_8_8193_8']}
+{'mode': 'torch', 'case': 'pr9', 'a': ['typhon', 4], 'b': ['smaug', 4], 'different': []}
+{'mode': 'torch', 'case': 'pr9', 'a': ['typhon', 4], 'b': ['unity', 4], 'different': ['torch_exp32', 'torch_conv3d']}
+{'mode': 'torch', 'case': 'pr9', 'a': ['typhon', 1], 'b': ['smaug', 1], 'different': []}
+{'mode': 'torch', 'case': 'pr9', 'a': ['typhon', 1], 'b': ['unity', 1], 'different': ['torch_exp32', 'torch_conv3d']}
+{'mode': 'torch', 'case': 'pr9', 'a': ['smaug', 4], 'b': ['unity', 4], 'different': ['torch_exp32', 'torch_conv3d']}
+{'mode': 'torch', 'case': 'pr9', 'a': ['smaug', 1], 'b': ['unity', 1], 'different': ['torch_exp32', 'torch_conv3d']}
+{'mode': 'torch', 'case': 'compatible', 'a': ['typhon', 4], 'b': ['smaug', 4], 'different': []}
+{'mode': 'torch', 'case': 'compatible', 'a': ['typhon', 4], 'b': ['unity', 4], 'different': []}
+{'mode': 'torch', 'case': 'compatible', 'a': ['typhon', 1], 'b': ['smaug', 1], 'different': []}
+{'mode': 'torch', 'case': 'compatible', 'a': ['typhon', 1], 'b': ['unity', 1], 'different': []}
+{'mode': 'torch', 'case': 'compatible', 'a': ['smaug', 4], 'b': ['unity', 4], 'different': []}
+{'mode': 'torch', 'case': 'compatible', 'a': ['smaug', 1], 'b': ['unity', 1], 'different': []}
+{'mode': 'torch', 'case': 'strict_avx2', 'a': ['typhon', 1], 'b': ['smaug', 1], 'different': []}
+{'mode': 'torch', 'case': 'strict_avx2', 'a': ['typhon', 1], 'b': ['unity', 1], 'different': ['torch_exp32', 'torch_conv3d']}
+{'mode': 'torch', 'case': 'strict_avx2', 'a': ['typhon', 4], 'b': ['smaug', 4], 'different': []}
+{'mode': 'torch', 'case': 'strict_avx2', 'a': ['typhon', 4], 'b': ['unity', 4], 'different': ['torch_exp32', 'torch_conv3d']}
+{'mode': 'torch', 'case': 'strict_avx2', 'a': ['smaug', 1], 'b': ['unity', 1], 'different': ['torch_exp32', 'torch_conv3d']}
+{'mode': 'torch', 'case': 'strict_avx2', 'a': ['smaug', 4], 'b': ['unity', 4], 'different': ['torch_exp32', 'torch_conv3d']}
