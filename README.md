@@ -32,7 +32,7 @@ scope; publication was subsequently authorized on October 5.
 # CPU reproducibility experiments for reproseed PR 9
 
 These experiments support [ReproNim/reproseed#9](https://github.com/ReproNim/reproseed/pull/9)
-and the proposed preservation of explicit MKL CNR settings and NumPy exclusions.
+and [the proposed preservation of explicit MKL CNR settings and NumPy exclusions](https://github.com/ReproNim/reproseed/pull/11).
 The scripts, locked Pixi environment, DataLad executions, runtime diagnostics,
 and output arrays are preserved here. Upstream revision: `5f8229787001a946e4e020b68805661272577428`.
 
@@ -111,6 +111,7 @@ maximum absolute and relative differences). Archives are hosted in the
 DataLad's archive remote maps individual annexed arrays to these assets:
 
 ```sh
+pixi run git annex enableremote datalad-archives
 pixi run datalad get recorded-v2/results/strict-t1-r1/outputs.npz
 # For another host, use a separate clone with --branch smaug-results or unity-results.
 ```
