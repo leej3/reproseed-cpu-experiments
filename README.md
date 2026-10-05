@@ -9,10 +9,11 @@ caller-value preservation and the latest review of
 The October 4 expansion adds 192 native process runs, PyTorch coverage,
 and measured AVX2/COMPATIBLE/STRICT performance tradeoffs across three hosts.
 See [detailed results](followup-summary.json), [host records](host-results/),
-and [provenance](followup-provenance.json). Synthetic raw arrays, checksums, and the combined dataset history bundle
-are uploaded to a draft release, pending explicit approval for public release.
-They are not yet publicly downloadable. The published metadata and hashes
-remain available here.
+and [provenance](followup-provenance.json). Download the synthetic raw arrays,
+SHA-256 checksums, and combined dataset history bundle from the
+[expanded benchmark release](https://github.com/leej3/reproseed-cpu-experiments/releases/tag/followup-20261004).
+All 288 arrays were checked against the recorded output hashes; the uploaded
+archives and history bundle also match the published SHA-256 checksums.
 Archive paths are relative to each host's dataset root; use that host's
 `commands.json` to select executed configurations. Extract archives into
 separate host directories, not over a Git-annex checkout's symlinks.
