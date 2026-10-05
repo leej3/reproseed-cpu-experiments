@@ -1,3 +1,34 @@
+AI draft - not reviewed by John
+
+## October 5 update: expanded native benchmarks
+
+Read the [condensed report](REPORT.txt) for findings still relevant after
+[ReproNim/reproseed#9](https://github.com/ReproNim/reproseed/pull/9) adopted
+caller-value preservation and the latest review of
+[ReproNim/reproseed#11](https://github.com/ReproNim/reproseed/pull/11).
+The October 4 expansion adds 192 native process runs, PyTorch coverage,
+and measured AVX2/COMPATIBLE/STRICT performance tradeoffs across three hosts.
+See [detailed results](followup-summary.json), [host records](host-results/),
+and [provenance](followup-provenance.json). Synthetic raw arrays are in the
+[expanded benchmark release](https://github.com/leej3/reproseed-cpu-experiments/releases/tag/followup-20261004).
+The release includes checksums and the original dataset history bundle.
+Archive paths are relative to each host's dataset root; use that host's
+`commands.json` to select executed configurations. Extract archives into
+separate host directories, not over a Git-annex checkout's symlinks.
+
+The measurements pin earlier code; they do not test current #9. The report
+supersedes the historical recommendations below. In particular, current #9
+already preserves caller values, including empty values, and intentionally
+keeps NumPy lists verbatim. No change to either PR is included here.
+The old COMPATIBLE patch and proposed-code directory are historical evaluated
+artifacts, not a recommendation to apply them unchanged to current #9.
+`followup-provenance.json` records the investigation's original local-only
+scope; publication was subsequently authorized on October 5.
+
+---
+
+## Historical October 3 investigation (pinned old PR revisions)
+
 # CPU reproducibility experiments for reproseed PR 9
 
 These experiments support [ReproNim/reproseed#9](https://github.com/ReproNim/reproseed/pull/9)
